@@ -21,7 +21,8 @@ Comments welcome.
 - Extend Openfeature operator to read CUE based configuration
 - Write the demo image admission controller
 
-## End-user takeaways
+
+## End-user takeaways
 
 Featureflags can be used at the infrastructure level
 OpenFeature operator and FlagD allow you to build against them with no real work required to integrate ( evaluator included ).

@@ -1,4 +1,4 @@
-## 001-OFEP-cloud-native-pattern.md
+## 001-OFEP-cloud-native-pattern.md
 
 ## State: APPROVED
 
