@@ -40,8 +40,8 @@ the application developer.
 
 The Hooks should be executed in specific order.
 
-* before: API, Client, Provider, Invocation
-  * Provider does initialization before Invocation
+* before: API, Client, Invocation, Provider
+  * Provider does initialization after Invocation
 * after:  Invocation, Provider, Client, API  
   * Provider runs after Invocation so that it can turn off default behavior if the application chooses to override it
 * error (if applicable): Provider, Invocation, Client, API
