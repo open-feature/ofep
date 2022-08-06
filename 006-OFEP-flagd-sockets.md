@@ -6,6 +6,7 @@ Often when flagD is required to talk to another application within the same pod,
 than the full TCP/IP stack. There are also permission benefits around using a socket in terms of file ownership.
 This OFEP outlines an approach to use gRPC over Unix sockets to enable this.
 
+<img src="images/006-01.png" width="300">
 
 ## Background
 
@@ -31,16 +32,9 @@ I propose that we introduce an additional layer of gRPC options in the `grpc_ser
 This would allow a new `serveSocket` method to be created and facilitate the IPC functionality.
 _Note this wouldn't be a TLS enabled transport_
 
-## Sections
+### Implementation
 
-From this point onwards, the sections and headers are generally freeform depending on the OFEP. Sections are styled as "Heading 2". Try to organize your information into self-contained sections that answer some critical question, and organize your sections into an order that builds up knowledge necessary (rather than forcing a reader to jump around to gain context).
-
-Sections often are split further into sub-sections styled "Heading 3". These sub-sections just further help to organize data to ease reading and discussion.
-
-### [Example] Implementation
-
-Many OFEPs have an "implementation" section which details how the implementation will work. This section should explain the rough API changes (internal and external), package changes, etc. The goal is to give an idea to reviews about the subsystems that require change and the surface area of those changes. 
-
-This knowledge can result in recommendations for alternate approaches that perhaps are idiomatic to the project or result in less packages touched. Or, it may result in the realization that the proposed solution in this OFEP is too complex given the problem.
-
-For the OFEP author, typing out the implementation in a high-level often serves as "rubber duck debugging" and you can catch a lot of issues or unknown unknowns prior to writing any real code.
+- [x] Create a socket path parameter within flagD
+- [ ] `grpc_service.go` to support unix sockets through a new method that returns a net connection
+- [ ] Modifiy the existing `http_service` code to leverage a similar net connection start
+- [ ] Write tests
