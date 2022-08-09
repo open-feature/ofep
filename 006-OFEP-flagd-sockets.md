@@ -1,6 +1,6 @@
 ## NAME
 
-## State: ( DRAFTING )
+## State: ( APPROVED )
 
 Often when flagD is required to talk to another application within the same pod, it is far faster to use a unix socket 
 than the full TCP/IP stack. There are also permission benefits around using a socket in terms of file ownership.
