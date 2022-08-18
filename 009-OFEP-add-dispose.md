@@ -32,3 +32,14 @@ the `Client`-type needs to be enhanced to also have the `dispose`-function:
 ```typescript
 dispose(): Promise<void>
 ```
+
+A potential implementation could be the following in the Node SKD:
+
+```typescript
+/**
+ * Dispose
+ */
+async dispose(): Promise<void> {
+   await this.provider.dispose()
+}
+```
