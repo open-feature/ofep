@@ -33,7 +33,7 @@ the `Client`-type needs to be enhanced to also have the `dispose`-function:
 dispose(): Promise<void>
 ```
 
-A potential implementation could be the following in the Node SKD:
+A potential implementation could be the following in the Node SDK:
 
 ```typescript
 /**
