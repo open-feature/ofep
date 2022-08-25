@@ -62,7 +62,7 @@ I believe a _sharedinformer_ might be appropriate over indexed, unless we're loo
 - Lays foundation for watching of specific flagD feature configuration types _as per previous issue discussions_
 
 ## Caveats
- 
+- Creates a deep reference to Open feature operator
 - Requires the design of failures modes for deletion of custom resources.
 - Additional load on the API Server
 - tightly couple FlagD to the Kubernetes golang bindings and limit multi-arch compatibility
