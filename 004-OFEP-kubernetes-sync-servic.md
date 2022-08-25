@@ -51,7 +51,7 @@ informer := config.InformerFactory.InformerFor(&batch_v1.Job{}, func(client kube
 })
 ```
 
-I believe an _indexinformer_ would be overkill at this point, unless we're looping over all the featureflagconfigurations in the cluster and they list in their hundreds.
+I believe a _sharedinformer_ might be appropriate over indexed, unless we're looping over all the featureflagconfigurations in the cluster and they list in their hundreds.
 
 <img src="images/004-02.png" width="850px;">
 
