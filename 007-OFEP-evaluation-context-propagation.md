@@ -14,7 +14,7 @@ I propose that we introduce a way to register a transaction context propagator t
 
 ### Register Context Propagator
 
-In some runtimes (i.e. node), there isn't a native solution for transaction context propagation that would work in all situations. For that reason, it would be beneficial to provide the ability to register a transaction propagator on the global OpenFeature API.
+In some runtimes (e.g. node), there isn't a native solution for transaction context propagation that would work in all situations. For that reason, it would be beneficial to provide the ability to register a transaction propagator on the global OpenFeature API.
 
 ```typescript
 /**
