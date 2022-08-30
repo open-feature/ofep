@@ -2,7 +2,7 @@
 
 ## State: DRAFTING
 
-Evaluation context may be used to conditionally control the value returned from a flag evaluation. You could, for example, enable a feature for all users with a specific email domain. Using evaluation context propagation, application developers can set evaluation context where it's convenient (i.e. an auth service) and have it persist for the length of a transaction (i.e. request or thread).
+Evaluation context may be used to conditionally control the value returned from a flag evaluation. You could, for example, enable a feature for all users with a specific email domain. Using evaluation context propagation, application developers can set evaluation context where it's convenient (e.g. an auth service) and have it persist for the length of a transaction (e.g. a request or thread).
 
 ## Background
 
