@@ -76,7 +76,7 @@ flowchart LR
   invocation("Invocation")
   hook("Before Hooks")
   global --> transaction
-  transaction == > client
+  transaction --> client
   client --> invocation
   invocation --> hook
 ```
