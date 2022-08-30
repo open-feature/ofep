@@ -8,7 +8,7 @@ Transaction context, a subset of the evaluation context, is a container for tran
 
 ## Background
 
-Many languages provide a mechanism for storing data for the length of a single transaction. This can be used to store transaction context that can be automatically merged with the evaluation context before flag evaluation. The implementation will vary by technology. For example, Java may use [thread local][thread-local], Golang may use [Go Context][go-context], and Node may use [async hooks][async-hooks].
+Many languages provide a mechanism for storing data for the length of a single transaction. This can be used to store transaction context that can be automatically merged with the evaluation context before flag evaluation. The implementation will vary by technology. For example, Java may use [ThreadLocal][thread-local], Golang may use [Go Context][go-context], and Node may use [async hooks][async-hooks].
 
 ## Proposal
 
