@@ -6,7 +6,7 @@ Evaluation context may be used to conditionally control the value returned from 
 
 ## Background
 
-Many languages provide a mechanism for storing variables for the length of a single transaction. This can be used to store evaluation context that can be transparently merged before flag evaluation. The implementation will vary by technology. For example, Java may use [thread local][thread-local], Golang may use [Go Context][go-context], and Node may use [async hooks][async-hooks].
+Many languages provide a mechanism for storing data for the length of a single transaction. This can be used to store evaluation context that can be transparently merged before flag evaluation. The implementation will vary by technology. For example, Java may use [thread local][thread-local], Golang may use [Go Context][go-context], and Node may use [async hooks][async-hooks].
 
 ## Proposal
 
