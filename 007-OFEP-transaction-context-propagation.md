@@ -2,9 +2,12 @@
 
 ## State: DRAFTING
 
-Evaluation context is a container for all contextual data that can be used used to conditionally control the value returned from a flag evaluation. Currently, developers are responsible for explicitly defining and supplying evaluation context during flag evaluation.
+Flag evaluation may be affected by [evaluation context](https://docs.openfeature.dev/docs/specification/sections/evaluation-context) data including global, client, invocation, and hook context.
+Currently, developers are responsible for explicitly defining and supplying evaluation context during flag evaluation.
+This proposal defines a new type of evaluation context called transaction context.
 
-_Transaction context_, a subset of the evaluation context, is a container for transaction specific data (e.g. user id, user agent, IP) that lives for the duration of a transaction. With transaction context propagation, a developer can set transaction context where it's convenient (e.g. an auth service) and have it persist for the length of a transaction (e.g. a request or thread). OpenFeature will then merge transaction context with evaluation context before flag evaluation.
+_Transaction context_, is a container for transaction-specific evaluation context (e.g. user id, user agent, IP).
+With transaction context propagation, a developer can set transaction context where it's convenient (e.g. an auth service) and it will automatically be applied to all flag evaluations within a transaction (e.g. a request or thread). Transaction context will typically be propagated using a language-specific carrier such as thread local storage or another similar mechanism.
 
 ## Background
 
