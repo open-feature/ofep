@@ -12,7 +12,7 @@ Many languages provide a mechanism for storing data for the length of a single t
 
 ## Proposal
 
-This proposal introduces a way to register a transaction context propagator to the global OpenFeature API. Once registered, transaction context can be defined at any point in the transaction. When a flag is evaluated, the transaction context is merged with evaluation context based on the merge order defined below.
+This proposal introduces a way to register a transaction context propagator to the global OpenFeature API. Once registered, transaction context can be augmented or mutated at any point in the transaction. When a flag is evaluated, the transaction context is merged with evaluation context based on the merge order defined below.
 
 ### Register Transaction Context Propagator
 
