@@ -1,6 +1,6 @@
 ## 004-OFEP-inotfiy-interface
 
-## State: PENDING REVIEW
+## State: APPROVED
 
 FlagD is often used in the context of Kubernetes.
 
