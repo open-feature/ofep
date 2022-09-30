@@ -86,7 +86,7 @@ flowchart LR
 
 ### Implementation
 
-- [ ] Example implementation in Node
+- [X] [Example implementation in Node](https://github.com/open-feature/js-sdk/pull/212)
 - [ ] Example implementation in Golang
 
 [thread-local]: https://docs.oracle.com/javase/8/docs/api/java/lang/ThreadLocal.html
