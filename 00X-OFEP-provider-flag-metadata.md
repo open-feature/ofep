@@ -41,7 +41,7 @@ The SDK is responsible for calling `getMetadataForFlag` during every flag evalua
 
 The contents of `FlagMetadata` must be immutable once returned from `getMetadataForFlag`. We won't support adding/removing/editing metadata in hooks, for example.
 
-Format of the metadata attribute is left up to the provider. Maybe we provide suggestions around formatting, and a namespacing prefix (e.g. `"flags-r-us.management-url"). Following otel conventions for span attributes might be smart.
+Format of the metadata attribute is left up to the provider. Maybe we provide suggestions around formatting, and a namespacing prefix (e.g. `"flags-r-us.management-url"`). Following otel conventions for span attributes might be smart.
 
 The SDK will not cache the results of the `getMetadataForFlag` call, and must call it once during every flag evaluation.
 
