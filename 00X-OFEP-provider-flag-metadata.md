@@ -20,31 +20,18 @@ The Open Feature spec will be extended in two ways:
 - a flag provider will be able to provide a bag of metadata attributes for a feature flag. This bag will be a set of key-value pairs, where the key will be a string and the value will be a small set of primitive values.
 - a hook will be able to access these metadata attributes
 
-*note* what follows is a VERY rough strawman proposal for one way to extend the spec. Please poke holes!
+*note* what follows is a strawman proposal for one way to extend the spec. Please poke holes!
 
-### provider interface
-
-We add a `getMetadataForFlag(flagKey:string):FlagMetadata` method to the provider interface. 
+We add an optional `flagMetadata:FlagMetadata` field to the Resolution Details structure - and therefore also to the Evaluation Details structure, since the former is a specified as having a subset of the fields in the latter.
 
 The `FlagMetadata` has a type like `Record<string,string|boolean|number>` in typescript, where the key is the metadata attribute and the value is the metadata value.
 
-If called with an unrecognized `flagKey`, the method MUST return an empty FlagMetadata instance.
+The flagMetadata field MAY return an empty record.
 
-### hook interface
-
-The HookContext interface will gain a `flagMetadata:FlagMetadata` field. 
-
-The SDK is responsible for calling `getMetadataForFlag` during every flag evaluation, and passing whatever was provided into the HookContext.
-
+Since hooks are provided the evaluation context, they would have access to any flag metadata that the provider provides.
 
 ### other details
 
-The contents of `FlagMetadata` must be immutable once returned from `getMetadataForFlag`. We won't support adding/removing/editing metadata in hooks, for example.
+The flagMetadata field should be considered immutable. We won't support adding/removing/editing metadata in hooks, for example.
 
 Format of the metadata attribute is left up to the provider. Maybe we provide suggestions around formatting, and a namespacing prefix (e.g. `"flags-r-us.management-url"`). Following otel conventions for span attributes might be smart.
-
-The SDK will not cache the results of the `getMetadataForFlag` call, and must call it once during every flag evaluation.
-
-## Open Questions
-
-- Should we also expose flag metadata in the `FlagEvaluationDetails`, in case an OF client wants to consume them directly?
