@@ -26,7 +26,7 @@ We add an optional `flagMetadata:FlagMetadata` field to the Resolution Details s
 
 The `FlagMetadata` has a type like `Record<string,string|boolean|number>` in typescript, where the key is the metadata attribute and the value is the metadata value.
 
-The flagMetadata field MAY return an empty record.
+The flagMetadata field MAY return an empty record. A missing `flagMetadata` field MUST be interpreted as an empty record.
 
 Since hooks are provided the evaluation context, they would have access to any flag metadata that the provider provides.
 
