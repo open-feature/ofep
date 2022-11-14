@@ -1,4 +1,4 @@
-## ??-OFEP-provider-metadata-feature-discovery
+## OFEP-provider-metadata-feature-discovery
 
 ## State: DRAFTING
 
