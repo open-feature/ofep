@@ -24,13 +24,13 @@ import { Provider, Functions } from '@openfeature/js-sdk';
 class SomeFeatureProvider implements Provider {
   readonly metadata = {
     name: 'Some Feature Provider',
-		features: {
-			[Functions.SomeFeature]: true,
-			[Functions.ProviderEvents]: true,
-			[Functions.SomeOtherFeature]: false,
-		}
+    features: {
+      [Functions.SomeFeature]: true,
+      [Functions.ProviderEvents]: true,
+      [Functions.SomeOtherFeature]: false,
+    }
   };
 
-	// ...implementation...
+  // ...implementation...
 }
 ```
