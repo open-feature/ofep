@@ -1,4 +1,4 @@
-## Surfacing flag metadata
+## OFEP-007: Surfacing flag metadata
 
 ## State: DRAFTING
 This proposal lays out a mechanism for flag providers to surface arbitrary flag metadata to Open Feature, and for hooks to access this metadata.
