@@ -25,9 +25,9 @@ class SomeFeatureProvider implements Provider {
   readonly metadata = {
     name: 'Some Feature Provider',
     features: {
-      [Functions.SomeFeature]: true,
-      [Functions.ProviderEvents]: true,
-      [Functions.SomeOtherFeature]: false,
+      [Capabilities.SomeFeature]: true,
+      [Capabilities.ProviderEvents]: true,
+      [Capabilities.SomeOtherFeature]: false,
     }
   };
 
