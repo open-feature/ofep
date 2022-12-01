@@ -24,7 +24,7 @@ import { Provider, Capabilities } from '@openfeature/js-sdk';
 class SomeFeatureProvider implements Provider {
   readonly metadata = {
     name: 'Some Feature Provider',
-    features: {
+    capabilities: {
       [Capabilities.SomeFeature]: true,
       [Capabilities.ProviderEvents]: true,
       [Capabilities.SomeOtherFeature]: false,
