@@ -2,7 +2,7 @@
 
 ## State: DRAFTING
 
-Some flag SDKs support listening for flag value changes or general configuration changes ([launchdarkly](https://docs.launchdarkly.com/sdk/features/flag-changes), [cloudbees](https://docs.cloudbees.com/docs/cloudbees-feature-management/latest/reporting/configuration-fetched-handler), flagd). This can allow us to use an event-based paradigm for consuming flags. Client apps may use feature flags for characteristics that aren't specifically tied to a user-action, making imperative flag evaluation a less-than-ideal solution. A server application could listen to a flag that changes some operational behavior.
+Some flag SDKs support listening for flag value changes or general configuration changes ([launchdarkly](https://docs.launchdarkly.com/sdk/features/flag-changes), [cloudbees](https://docs.cloudbees.com/docs/cloudbees-feature-management/latest/reporting/configuration-fetched-handler), flagd). This can allow us to use an event-based paradigm for consuming flags. Client apps may use feature flags for characteristics that aren't specifically tied to a user-action, making imperative flag evaluation a less-than-ideal solution. Web clients using frameworks such as React need a way to register a callback for when a provider has initialized, given that it's not uncommon for a flag to be evaluated before the provider is ready (during page load). A server application could listen to a flag that changes some operational behavior.
 
 Examples:
 
@@ -12,9 +12,9 @@ Examples:
 
 ## Design
 
-The provider interface and the OpenFeature client would be extended to have new functionality to register handlers for a set of events defined by the SDK (`ProviderEvents`). When a _application author_ registers a handler on a client, the client the client maintains this handler. The provider emits events or runs a callback indicating that it received a certain event, optionally providing data associated with that event. The callbacks registered with the client are then invoked with this data (`EventData`).
+The provider interface and the OpenFeature client would be extended to have new functionality to register handlers for a set of events defined by the SDK (`ProviderEvents`). When a consumer (_application integrator_, _application author_) registers a handler on a client, the client maintains this handler. The provider emits events or runs a callback indicating that it received a certain event, optionally providing data associated with that event. The callbacks registered with the client are then invoked with this data (`EventData`).
 
-In the case of the aforementioned flag systems, flags are not actually evaluated when configurations are changed. One reason is that no dynamic context can be reasonably provided in the case of events, since the event is driven by a change in the flag management system, not a user-action. In these cases, the `EventData` would not contain flag values and the application author would have to evaluate flags in the registered handler. This is consistent with the event APIs already existing in those systems.
+In the case of the aforementioned flag systems, it is the consumer's responsibility to evaluate any flags in response to the change - flag evaluation would not be automatically performed by the SDK. One reason is that no dynamic context can be reasonably provided in the case of events, since the event is driven by a change in the flag management system, not a user-action. In these cases, the `EventData` would not contain flag values and the application author would have to evaluate flags in the registered handler. This is consistent with the event APIs already existing in those systems.
 
 How it looks implemented in a Provider:
 
