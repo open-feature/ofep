@@ -1,6 +1,6 @@
 ## OFEP-provider-metadata-capability-discovery
 
-## State: DRAFTING
+## State: APPROVED
 
 This OFEP proposes a solution for "capability discovery" in the context of providers, in order to signal to the SDK and `application authors` what functionality is available in a particular provider.
 
