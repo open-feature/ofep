@@ -7,7 +7,7 @@ This draft outlines a "single-context" paradigm - an alternative pattern and set
 ## Background
 
 In contrast with server-side or other service-type applications, client side apps typically operate in the context of a single user.
-Most feature flagging for these applications have been designed with this in mind.
+Most feature flagging SDKs for these applications have been designed with this in mind.
 In summary, most client/web SDKs operate something like this:
 
 - an initialization occurs, which fetches evaluated flags in bulk for a given context (user)
