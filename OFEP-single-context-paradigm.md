@@ -31,7 +31,7 @@ When the context is changed, providers are signalled to update their cache of ev
 
 #### On-context-set handler
 
-Providers must have a mechanism to understand when their cache of evaluated flags must be invalidated or updated. An `on-context-set` handler can be defined which performs whatever operations are needed to reconcile the evaluated flags with the new context. The OpenFeature SDK calls this handler when the global context is modified.
+Providers may need a mechanism to understand when their cache of evaluated flags must be invalidated or updated. An `on-context-set` handler can be defined which performs whatever operations are needed to reconcile the evaluated flags with the new context. The OpenFeature SDK calls this handler when the global context is modified.
 
 ```typescript
 
