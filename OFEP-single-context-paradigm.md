@@ -39,11 +39,13 @@ interface Provider {
   //...
 
   // a handler called by the SDK when context is modified
-  onContextChange?(oldContext: EvaluationContext, newContext: EvaluationContext): Promise<void>
+  onContextSet?(oldContext: EvaluationContext, newContext: EvaluationContext): Promise<void>
 
   //...
 }
 ```
+
+While the `on-context-set` handler is executing, the cache of resolved flags may be considered "stale". `Provider authors` and `application authors` should understand the consequences of evaluating flags in this state.
 
 #### Remove evaluation-context parameter on resolvers
 
@@ -82,3 +84,22 @@ interface Client {
 #### Remove context mutator
 
 The global context has a one-to-one correspondence to the providers cache of evaluated flags. It's unreasonable or impossible to reconcile multiple client-level contexts with this state. The context mutator of the client must be removed.
+
+### Hook changes
+
+#### Remove return value from before stage
+
+Context cannot be modified at evaluation, so `before` stage 
+
+```typescript
+
+export interface Hook<T extends FlagValue = FlagValue> {
+  //...
+
+  // before handler no longer optionally returns an EvaluationContext
+  before?(hookContext: BeforeHookContext, hookHints?: HookHints): void;
+
+  //...
+}
+
+```
