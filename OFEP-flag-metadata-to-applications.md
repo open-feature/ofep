@@ -13,7 +13,7 @@ approach, it is desirable to expose flag metadata to the application layer.
 
 This metadata can then be used by application authors for various purposes such as validation, tooling and testing.
 For example, cross-validations of flags used by an application using unit tests without the need for evaluation API 
-or a connection to the flag management system.
+or a direct connection to the flag management system.
 
 ## Proposal
 
