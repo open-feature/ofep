@@ -9,6 +9,10 @@ This proposal defines a new type of evaluation context called transaction contex
 _Transaction context_, is a container for transaction-specific evaluation context (e.g. user id, user agent, IP).
 With transaction context propagation, a developer can set transaction context where it's convenient (e.g. an auth service) and it will automatically be applied to all flag evaluations within a transaction (e.g. a request or thread). Transaction context will typically be propagated using a language-specific carrier such as thread local storage or another similar mechanism.
 
+This proposal covers context propagation for a single transaction within a process.
+Propagating evaluation context to child processes or services is out of scope of this OFEP.
+However, a proof of concept for how OpenTelemetry baggage could be leverage can be found [here][otel-baggage-poc].
+
 ## Background
 
 Many languages provide a mechanism for storing data for the length of a single transaction. This can be used to store transaction context that can be automatically merged with the evaluation context before flag evaluation. The implementation will vary by technology. For example, Java may use [ThreadLocal][thread-local], Golang may use [Go Context][go-context], and Node may use [async hooks][async-hooks].
@@ -92,3 +96,4 @@ flowchart LR
 [thread-local]: https://docs.oracle.com/javase/8/docs/api/java/lang/ThreadLocal.html
 [go-context]: https://pkg.go.dev/context
 [async-hooks]: https://nodejs.org/api/async_hooks.html
+[otel-baggage-poc]: https://github.com/open-feature/playground/pull/142
