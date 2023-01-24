@@ -23,7 +23,8 @@ it should be possible to enforce the following,
 - flag key 
 - flag type 
 
-Other vendor specific, non-sensitive data can also be present and they can be included in a dedicated `data` segment.
+Metadata response must not contain flag evaluation data. Other vendor specific, non-sensitive data can also be present
+and they can be included in a dedicated `data` segment.
 
 From a JSON representation, this payload could look like below,
 
