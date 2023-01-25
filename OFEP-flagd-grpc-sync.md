@@ -1,4 +1,4 @@
-## OFEP: Add GRPC sync support to flagd
+## OFEP: Add gRPC sync support to flagd
 
 ## State: DRAFTING
 
