@@ -20,7 +20,7 @@ performant connectivity between flagd and flag management system.
 
 <img src="images/ofep-fd-grpc-2.png" width="300">
 
-### Taks
+### Tasks
 
 Following are the main tasks I am proposing for the implementation,
 
