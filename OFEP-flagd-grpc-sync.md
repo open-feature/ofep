@@ -15,8 +15,9 @@ The gRPC schema will be defined by flagd and supporting flag management system(s
 
 <img src="images/ofep-fd-grpc-1.png" width="300">
 
-Further, server push can be expanded to have `event types` such as flag updates, modifications and deletions, giving more
-performant connectivity between flagd and flag management system.
+Further, server push can be expanded to have `event types` such as flag additions, updates and deletions, giving more
+performant connectivity between flagd and flag management system. Performance improvements come from reduced payload
+size(single flag change vs all flags) and connection establishment overhead, which is missing with streaming.
 
 <img src="images/ofep-fd-grpc-2.png" width="300">
 
@@ -24,6 +25,14 @@ performant connectivity between flagd and flag management system.
 
 Following are the main tasks I am proposing for the implementation.
 
-- [x] POC for the implementation and OFEP approval
+- [x] POC implementation - https://github.com/open-feature/flagd/pull/297 
+- [ ] OFEP approval
 - [ ] Introduce basic grpc sync, with minimal configuration options
-- [ ] Introduce additional options, such as SSL certificates, token authentication on top of existing solution
+- [ ] Introduce additional options, such as TLS certificates, token authentication on top of existing solution
+
+#### SSL certificates and token authentication
+
+Consider the GRPC authentication example provided through official Go guide - [Link](https://github.com/grpc/grpc-go/tree/master/examples/features/authentication)
+
+With a similar approach, it is possible to establish TLS connections and enable token based authentication/authorization
+between flagd and flag management system.
