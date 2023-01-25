@@ -22,7 +22,7 @@ performant connectivity between flagd and flag management system.
 
 ### Tasks
 
-Following are the main tasks I am proposing for the implementation,
+Following are the main tasks I am proposing for the implementation.
 
 - [x] POC for the implementation and OFEP approval
 - [ ] Introduce basic grpc sync, with minimal configuration options
