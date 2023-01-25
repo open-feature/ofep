@@ -3,7 +3,7 @@
 ## State: DRAFTING
 
 This OFEP proposes to introduce gRPC syncs to flagd. gRPC sync will act similar to existing remote HTTP URL syncs. But
-going beyond periodic pulls, flagd can utilize GRPC server streaming to receive near real-time updates, pushed from a
+going beyond periodic pulls, flagd can utilize gRPC server streaming to receive near real-time updates, pushed from a
 flag management system.
 
 ## Background
