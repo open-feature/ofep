@@ -11,7 +11,7 @@ flag management system.
 gRPC server streaming allows clients to listen and react to server-pushed data. For flagd, this perfectly matches the
 ISync interface and current sync mechanism implementations.
 
-The GRPC schema will be defined by flagd and supporting flag management system(s) then will implement the contract.
+The gRPC schema will be defined by flagd and supporting flag management system(s) then will implement the contract.
 
 <img src="images/ofep-fd-grpc-1.png" width="300">
 
