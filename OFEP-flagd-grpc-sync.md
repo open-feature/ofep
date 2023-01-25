@@ -8,7 +8,7 @@ flag management system.
 
 ## Background
 
-GRPC server streaming allows clients to listen and react to server-pushed data. For flagd, this perfectly matches with
+gRPC server streaming allows clients to listen and react to server-pushed data. For flagd, this perfectly matches the
 ISync interface and current sync mechanism implementations.
 
 The GRPC schema will be defined by flagd and supporting flag management system(s) then will implement the contract.
