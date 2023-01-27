@@ -26,8 +26,8 @@ The `Provider` type gets extended with the following function:
 dispose(): Promise<void>
 ```
 
-The function can be called by the the `Client` instance when it requests the resoures need to be disposed off, for this reason, 
-the `Client`-type needs to be enhanced to also have the `dispose`-function:
+The function can be called by the the `API` instance when it requests the resources need to be disposed off, for this reason, 
+the global API needs to be enhanced to also have the `dispose`-function:
 
 ```typescript
 dispose(): Promise<void>
