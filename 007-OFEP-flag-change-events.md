@@ -51,12 +51,32 @@ const client = OpenFeature.getClient();
 // subscribe to ProviderEvents.ConfigurationChanged events
 client.addHandler(ProviderEvents.ConfigurationChanged, (eventData: EventData | undefined) => {
 
-  // the exact structure of the EventData is not covered in this OFEP
-  if (eventData.changes.myFlag) {
+  // see EventData below
+  if (eventData.flagKeysChanged.contains('myFlagd')) {
     onMyFlagChange();
   }
   onAnyChange();
 });
+```
+
+Hypothetical enumeration of events:
+
+```ts
+export enum ProviderEvents {
+  Ready = 'PROVIDER_READY',
+  Error = 'PROVIDER_ERROR',
+  ConfigurationChanged = 'PROVIDER_CONFIGURATION_CHANGED',
+  Shutdown = 'PROVIDER_SHUTDOWN',
+};
+```
+
+Hypothetical structure of `EventData`:
+
+```ts
+export interface EventData {
+  flagKeysChanged?: string[],
+  changeMetadata?: { [key: string]: boolean | string } // similar to flag metadata
+}
 ```
 
 ## Benefits
