@@ -15,9 +15,14 @@ The gRPC schema will be defined by flagd and supporting flag management system(s
 
 <img src="images/ofep-fd-grpc-1.png" width="300">
 
-Further, server push can be expanded to have `event types` such as flag additions, updates and deletions, giving more
+Further, grpc server push can be expanded to have `event types` such as flag additions, updates and deletions, giving more
 performant connectivity between flagd and flag management system. Performance improvements come from reduced payload
-size (single flag change vs all flags) and connection establishment overhead, which is missing with streaming.
+size(single flag change vs all flags) and not having connection establishment overhead thanks to streaming.
+
+Note that the implementation complexity of `event types` lives at grpc server implementation. The implementation may use
+a state management system to derive the matching event type for a specific flag configuration change. In any case,
+flagd must not maintain any state (i.e- flagd must be stateless) and only react on the sync type to update flag 
+configurations.
 
 <img src="images/ofep-fd-grpc-2.png" width="300">
 
