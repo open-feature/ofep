@@ -16,7 +16,7 @@ Currently, you aren't able to cleanly handle these use cases in OpenFeature prov
 
 To allow to cleanly dispose of resources consumed by OpenFeature providers, I would like to purpose a `dispose`-function that
 can be called by OpenFeature SDK to allow to cleanup these resources. The OpenFeature provider will implement an async function
-named `dispose` that can be called by the internal OpenFeature SDK
+named `dispose` that can be called by the internal OpenFeature SDK.
  
 ### [Example] Implementation
 
