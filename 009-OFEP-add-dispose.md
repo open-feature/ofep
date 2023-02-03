@@ -20,7 +20,7 @@ named `dispose` that can be called by the internal OpenFeature SDK.
  
 ### Example Implementation
 
-The `Provider` type gets extended with the following function:
+The `Provider` interfaces gets extended (in a non-breaking way) to include the following function:
 
 ```typescript
 dispose(): Promise<void>
