@@ -36,9 +36,6 @@ dispose(): Promise<void>
 A potential implementation could be the following in the Node SDK:
 
 ```typescript
-/**
- * Dispose
- */
 async dispose(): Promise<void> {
    await this.provider.dispose()
 }
