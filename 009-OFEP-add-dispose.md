@@ -18,7 +18,7 @@ To allow to cleanly dispose of resources consumed by OpenFeature providers, I wo
 can be called by OpenFeature SDK to allow to cleanup these resources. The OpenFeature provider will implement an async function
 named `dispose` that can be called by the internal OpenFeature SDK.
  
-### [Example] Implementation
+### Example Implementation
 
 The `Provider` type gets extended with the following function:
 
