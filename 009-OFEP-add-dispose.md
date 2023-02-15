@@ -2,7 +2,7 @@
 
 ## State: DRAFTING
 
-The goal of this OFEP is to enhance the OpenFeature API to allow authors to cleanly dispose of any resources by consumed by OpenFeature providers.
+The goal of this OFEP is to enhance the OpenFeature API to allow authors to cleanly dispose of any resources consumed by OpenFeature providers.
 
 ## Background
 
