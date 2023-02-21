@@ -14,7 +14,7 @@ Currently, you aren't able to cleanly handle these use cases in OpenFeature prov
 
 ## Proposal
 
-To allow to cleanly dispose of resources consumed by OpenFeature providers, I would like to purpose a function that can be called by OpenFeature SDK to allow to cleanup these resources.
+To allow clean dispose of resources consumed by OpenFeature providers, I would like to propose a function that can be called by OpenFeature SDK that allow to cleanup these resources.
 The OpenFeature provider will implement a similar function that will be called internally by the OpenFeature SDK.
 The function may be synchronous or asynchronous, as SDK practicalities and language idioms dictate.
 In order to facilitate resource disposal paradigms of the implementing language, the precise name of the function won't be specified.
