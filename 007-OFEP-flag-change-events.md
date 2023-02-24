@@ -21,9 +21,6 @@ How it looks implemented in a Provider:
 ```ts
 import { Provider, EventingProvider, ProviderEvents } from './types';
 
-/**
- * The No-op provider is set by default, and simply always returns the default value.
- */
 class MyEventingProvider implements Provider, EventingProvider {
   readonly metadata = {
     name: 'My Eventing Provider',
