@@ -1,6 +1,6 @@
 ## Transaction Context Propagation
 
-## State: DRAFTING
+## State: APPROVED
 
 Flag evaluation may be affected by [evaluation context](https://docs.openfeature.dev/docs/specification/sections/evaluation-context) data including global, client, invocation, and hook context.
 Currently, developers are responsible for explicitly defining and supplying evaluation context during flag evaluation.
