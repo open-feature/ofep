@@ -14,7 +14,7 @@ To address that, we will allow application authors to provide mappings of client
 
 ### Example Implementation
 
-Clients may optionally use [a named client](https://github.com/open-feature/spec/blob/74c373e089ad77bf8cac84f3d93c00c945ff3a8a/specification/sections/01-flag-evaluation.md?plain=1#L60), which we already support. If they don't pick a name, it falls through to a "root" provider.
+Authors may optionally use [a named client](https://github.com/open-feature/spec/blob/74c373e089ad77bf8cac84f3d93c00c945ff3a8a/specification/sections/01-flag-evaluation.md?plain=1#L60), which we already support. If they don't pick a name, it falls through to the configured "root" provider (or no provider if none are set).
 
 ```java
 # example library code
