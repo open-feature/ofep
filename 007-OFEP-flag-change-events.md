@@ -1,6 +1,6 @@
 ## 007-OFEP-flag-change-events
 
-## State: DRAFTING
+## State: APPROVED
 
 Some flag SDKs support listening for flag value changes or general configuration changes ([launchdarkly](https://docs.launchdarkly.com/sdk/features/flag-changes), [cloudbees](https://docs.cloudbees.com/docs/cloudbees-feature-management/latest/reporting/configuration-fetched-handler), flagd). This can allow us to use an event-based paradigm for consuming flags. Client apps may use feature flags for characteristics that aren't specifically tied to a user-action, making imperative flag evaluation a less-than-ideal solution. Web clients using frameworks such as React need a way to register a callback for when a provider has initialized, given that it's not uncommon for a flag to be evaluated before the provider is ready (during page load). A server application could listen to a flag that changes some operational behavior.
 
