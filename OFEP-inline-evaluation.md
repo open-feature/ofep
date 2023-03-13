@@ -16,6 +16,8 @@ To address this, I'd like to define a mechanism by which the rules can be return
 
 We would offer a stock `RuleEvaluatingProvider` that would implement the `getBooleanEvaluation` et al methods given a rule state. That rule state would be fetched by a `RuleFetcher`, which provider authors would implement. That fetcher would, for instance, download the rules from the data store and set up an appropriate update interval in the background.
 
+When "provider ready" events are in use, `RuleEvaluatingProvider` will not emit ready until the `RuleFetcher` emits ready.
+
 ## Rule Format
 
 The rule format use [JsonLogic](https://jsonlogic.com/), which is already setup in `flagD` and has broad support for various languages.
