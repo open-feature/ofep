@@ -2,7 +2,7 @@
 
 ## State: APPROVED
 
-This OFEP seeks to find a solution for near-zero latency flag evaluation for server-side contexts (e.g. not mobile).
+This OFEP seeks to find a solution for near-zero latency flag evaluation for server-side contexts (e.g. not mobile or client-side web).
 
 ## Background
 
