@@ -1,6 +1,6 @@
 ## Inline Evaluation of Flag Rules
 
-## State: APPROVED
+## State: REJECTED
 
 This OFEP seeks to find a solution for near-zero latency flag evaluation for server-side contexts (e.g. not mobile or client-side web).
 
