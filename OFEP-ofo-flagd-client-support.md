@@ -8,7 +8,6 @@ Client side applications (e.g. web/mobile) could benefit from access to feature 
 
 OFO already manages the deployment of flagd in server side contexts, handling the networking necessary for server side applications to communicate with flagd. This greatly simplifies the steps necessary for administrators to introduce flagd into their cluster, reducing the barrier of entry. Obtaining these benefits for the deployment of externally accessible flagd is the critical motivator for extending OFO.
 
-
 ## Assumptions
 The (simplified) deployment pattern is as follows
 
