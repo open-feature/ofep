@@ -23,7 +23,9 @@ This results in flagd being externally accessible.
 
 The following diagram depicts the architecture. Resources inside the green box are created via the proposed CRD.
 
-![OFO client architecture](/images/ofo-flagd-client-support-architecture.png "OFO Client Architecture")
+![OFO client architecture](images/ofo-flagd-client-support-architecture.png "OFO Client Architecture")
+
+Note: The example depicted by the diagram uses a subdomain to route the request to flagd but [path matching is also possible](https://gateway-api.sigs.k8s.io/api-types/httproute/#matches).
 
 ## Limitations
 [Kubernetes Gateway API (KGA)](https://gateway-api.sigs.k8s.io/) is in beta (as are its implementors). This OFEP could be extended (or a new one created) to also support [Ingress](https://kubernetes.io/docs/concepts/services-networking/ingress/).
