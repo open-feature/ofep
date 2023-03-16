@@ -21,6 +21,10 @@ The networking infrastructure for ingesting external traffic is already in place
 Introduce a custom resource definition (CRD) with configuration permitting OFO to create a deployment of flagd and inject the necessary networking configuration to route incoming traffic from the existing Gateway to flagd (via a new HTTPRoute).
 This results in flagd being externally accessible.
 
+The following diagram depicts the architecture. Resources inside the green box are created via the proposed CRD.
+
+<img src="images/ofo-flagd-client-support-architecture.png">
+
 ## Limitations
 [Kubernetes Gateway API (KGA)](https://gateway-api.sigs.k8s.io/) is in beta (as are its implementors). This OFEP could be extended (or a new one created) to also support [Ingress](https://kubernetes.io/docs/concepts/services-networking/ingress/).
 
