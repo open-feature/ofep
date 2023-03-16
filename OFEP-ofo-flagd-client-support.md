@@ -6,7 +6,7 @@ Client side applications (e.g. web/mobile) could benefit from access to feature 
 
 ## Background
 
-OFO already manages the deployment of flagd in server side contexts, handling the networking necessary for server side applications to communicate with flagd. This greatly simplifies the steps necessary for administrators to introduce flagd into their cluster, reducing the barrier of entry. Obtaining these benefits for the deployment of externally accessible flagd is the critical motivator for extending OFO.
+OFO already manages the deployment of flagd in server side contexts by injecting it as a sidecar container to an existing workload. This permits the workload to communicate with flagd due to the inherent nature of networking between containers within a pod. Conversely, the routing of client side applications to flagd is not trivial. OFO could bear this burden by configuring the cluster as necessary (see the proposal below) to facilitate the deployment of externally accessible (by client side applications) flagd.
 
 ## Assumptions
 The (simplified) deployment pattern is as follows
