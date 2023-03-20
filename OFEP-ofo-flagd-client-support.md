@@ -1,8 +1,15 @@
 ## flagd client support driven by OpenFeature Operator
 
-## State: DRAFTING
+## State: WITHDRAWN
 
 Client side applications (e.g. web/mobile) could benefit from access to feature flags. This OFEP outlines the feasibility and benefits of extending [OpenFeature Operator (OFO)](https://github.com/open-feature/open-feature-operator) to manage the deployment of flagd with access from external traffic (e.g. client side applications).
+
+_Withdrawn for the following reasons:_
+- _There's a huge variety of unknown deployment patterns by potential users. Catering to one likely means scope creep to support many in future. Perhaps this is the future path of OFO but an agreement has been reached that it is best to keep things simple and minimally scoped at this stage (until common deployment patterns are more established)._
+- _OFO would require CRUD permissions for HTTPRoutes & Gateways, introducing security concerns._
+- _Kubernetes Gateway API is still in beta._
+
+_When common deployment patterns are more established this proposal could be worth reviving._
 
 ## Background
 
