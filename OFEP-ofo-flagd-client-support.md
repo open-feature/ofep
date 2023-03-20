@@ -9,6 +9,8 @@ _Withdrawn for the following reasons:_
 - _OFO would require CRUD permissions for HTTPRoutes & Gateways, introducing security concerns._
 - _Kubernetes Gateway API is still in beta._
 
+_[OFEP for an alternative solution](./OFEP-ofo-flagd-service.md)._
+
 ## Background
 
 OFO already manages the deployment of flagd in server side contexts by injecting it as a sidecar container to an existing workload. This permits the workload to communicate with flagd due to the inherent nature of networking between containers within a pod. Conversely, the routing of client side applications to flagd is not trivial. OFO could bear this burden by configuring the cluster as necessary (see the proposal below) to facilitate the deployment of externally accessible (by client side applications) flagd.
