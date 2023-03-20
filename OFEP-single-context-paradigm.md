@@ -47,21 +47,25 @@ interface Provider {
 
 While the `on-context-set` handler is executing, the cache of resolved flags may be considered "stale". `Provider authors` and `application authors` should understand the consequences of evaluating flags in this state.
 
-#### Remove evaluation-context parameter on resolvers
+#### Initialize function
 
-With all evaluation context represented in the global context, resolvers no longer need it as a parameter. Providers that require context at evaluation can simply access the global evaluation context for use in their evaluation.
+Providers may need access to the static context when they start up.
+Passing this in the provider constructor is not always possible, and ergonomics are improved by separating configuration and evaluation.
 
-```typescript
+An `initialize` function can be optionally implemented by a provider, which defines an parameter for the static context.
 
 interface Provider {
   //...
-  
-  // context parameter is removed from resolver
-  resolveBooleanEvaluation(flagKey: string, defaultValue: boolean): ResolutionDetails<boolean>;
+
+  // a function called by the SDK when the provider becomes active
+  initialize?(context: EvaluationContext): Promise<void>
 
   //...
 }
 ```
+
+> NOTE: The provider interface will retain the context parameter.
+The parameter will be supplied by the SDK from the global context.
 
 ### Client changes
 
