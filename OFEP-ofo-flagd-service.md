@@ -11,7 +11,7 @@ The driving force behind this is to simplify the deployment of flagd for use by 
 ## Proposal
 
 Introduce a FlagdService custom resource definition (CRD) and controller.
-The controller uses the configuration defined within the custom resource (CR) to create a Service and a Deployment of flagd (backed by the Service) in the configured namespace. This is a common deployment pattern permitting access by any component that routes to the created Service (e.g. Ingress/Load Balancer). OFO already manages the [sidecar deployment pattern](https://learn.microsoft.com/en-us/azure/architecture/patterns/sidecar) to achieve the goal of internally routable flagd. In contrast, the described FlagdService pattern permits externally routable flagd.
+The controller uses the configuration defined within the custom resource (CR) to create a Service and a Deployment of flagd (backed by the Service) in the same namespace as the CR. This is a common deployment pattern permitting access by any component that routes to the created Service (e.g. Ingress/Load Balancer). OFO already manages the [sidecar deployment pattern](https://learn.microsoft.com/en-us/azure/architecture/patterns/sidecar) to achieve the goal of internally routable flagd. In contrast, the described FlagdService pattern permits externally routable flagd.
 
 ### RBAC
 
