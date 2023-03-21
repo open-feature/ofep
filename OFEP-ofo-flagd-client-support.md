@@ -9,7 +9,7 @@ _Withdrawn for the following reasons:_
 - _OFO would require CRUD permissions for HTTPRoutes & Gateways, introducing security concerns._
 - _Kubernetes Gateway API is still in beta._
 
-_[OFEP for an alternative solution](./OFEP-ofo-flagd-service.md)._
+_[OFEP for an alternative solution](./OFEP-ofo-flag-service.md)._
 
 ## Background
 
