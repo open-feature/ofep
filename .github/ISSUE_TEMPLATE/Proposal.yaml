@@ -1,0 +1,37 @@
+name: Feature Proposal
+description: Submit a proposal for a new feature.
+title: "[Proposal] "
+labels: ["OFEP"] 
+assignees:
+  - beeme1mr
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Before filling the form make sure to have a look at [Is My thing a Proposal for OFEP?](https://github.com/open-feature/ofep#is-my-thing-a-proposal-for-ofep).
+        Also make sure to follow the basic etiquettes of an issue like:
+          * title describes the content accurately,
+          * make sure sentences are short and clear, 
+          * grammar and spelling errors are not distorting the meaning. 
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category of Proposal
+      description: What category does your proposal belongs to? This helps us at first look to determine who will be engaging with your proposal from ours side.
+      options: 
+        - Infrastructure
+        - Architecture
+        - Implementation
+        - Rust Feature
+        - More such options+
+    validations:
+      required: true
+  - type: textarea
+    id: overview
+    attributes:
+      label: Describe your proposal
+      description: This is our first point of contact for reviewing the proposal. Talk about overview of the feature, expected goals achieved by it. This would be the point where you want to express the importance or relevance of feature depending upon its need.
+      placeholder: Here we want to most importantly understand your feature so make sure to draw the big picture the way it sounds relevant directly to openfeature. However, we would be happy to do deep dive if it's aligning with our vision.
+    validations:
+      required: true
+
