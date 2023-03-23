@@ -2,7 +2,7 @@
 
 ## State: DRAFTING
 
-Currently, OpenFeature Operator (OFO) manages the deployment of a flag provider (e.g. flagd) by appending it to a pod's containers (sidecar pattern), thereby allowing containers within the pod to route to it. This OFEP campaigns for the extension of OFO to manage the deployment of an externally accessible flag provider (e.g. from client side applications, or even server side applications that don't want to use the sidecar pattern).
+Currently, OpenFeature Operator (OFO) manages the deployment of a flag provider (e.g. flagd) by appending it to a pod's containers (sidecar pattern), thereby allowing containers within the pod to route to it. This OFEP campaigns for the extension of OFO to manage flag providers by abstracting a Kubernetes Deployment resource.
 
 ## Background
 
