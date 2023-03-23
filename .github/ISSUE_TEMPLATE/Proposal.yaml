@@ -8,30 +8,30 @@ body:
   - type: markdown
     attributes:
       value: |
-        Before filling the form make sure to have a look at [Is My thing a Proposal for OFEP?](https://github.com/open-feature/ofep#is-my-thing-a-proposal-for-ofep).
-        Also make sure to follow the basic etiquettes of an issue like:
-          * title describes the content accurately,
-          * make sure sentences are short and clear, 
+        Hi there! Thanks for your interest in submitting a proposal to OpenFeature Enhancement Proposal (OFEP)! We are excited to review your ideas and work with you. We appreciate your time and effort in helping us make our community-driven platform even better.
+        Before filling out the form, please take a moment to review our [Is My thing a Proposal for OFEP?](https://github.com/open-feature/ofep#is-my-thing-a-proposal-for-ofep) section.
+        As you draft your proposal, please keep in mind that we value clear and concise language, please make sure to follow common issue etiquette like:
+          * title describes the content accurately.
+          * sentences are short and clear. 
           * grammar and spelling errors are not distorting the meaning. 
   - type: dropdown
     id: category
     attributes:
       label: Category of Proposal
-      description: What category does your proposal belongs to? This helps us at first look to determine who will be engaging with your proposal from ours side.
+      description: What category does your proposal best fit? This helps us better identify your proposal to determine who to engage with on our side.
       options: 
-        - Infrastructure
-        - Architecture
-        - Implementation
-        - Rust Feature
-        - More such options+
+        - Specification
+        - OpenFeature Operator
+        - Flagd
+        - SDKs
+        - Other
     validations:
       required: true
   - type: textarea
     id: overview
     attributes:
       label: Describe your proposal
-      description: This is our first point of contact for reviewing the proposal. Talk about overview of the feature, expected goals achieved by it. This would be the point where you want to express the importance or relevance of feature depending upon its need.
-      placeholder: Here we want to most importantly understand your feature so make sure to draw the big picture the way it sounds relevant directly to openfeature. However, we would be happy to do deep dive if it's aligning with our vision.
+      description: Okay, fellow innovator! You have our attention! Go ahead and give us the pitch. We are thrilled to hear about your proposal and can't wait to see what you've got. Take a deep breath and dive right into the description. In this section, please provide us with a summary of your proposal and explain how it aligns with OpenFeature's vision and give us a glimpse of the value it will bring to the community. We appreciate your contribution and can't wait to see your vision come to life!
     validations:
       required: true
 
