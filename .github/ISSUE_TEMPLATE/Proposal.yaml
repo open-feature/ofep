@@ -31,7 +31,7 @@ body:
     id: overview
     attributes:
       label: Describe your proposal
-      description: Okay, fellow innovator! You have our attention! Go ahead and give us the pitch. We are thrilled to hear about your proposal and can't wait to see what you've got. Take a deep breath and dive right into the description. In this section, please provide us with a summary of your proposal and explain how it aligns with OpenFeature's vision and give us a glimpse of the value it will bring to the community. We appreciate your contribution and can't wait to see your vision come to life!
+      description: Okay, You have our attention! Go ahead and give us the pitch. We are eager to hear your proposal. Please provide us with a summary of your idea and explain how it aligns with OpenFeature’s vision. We are interested in understanding the value it will bring to the community. Thank you for your contribution and we look forward to seeing your vision come to life.
     validations:
       required: true
 
