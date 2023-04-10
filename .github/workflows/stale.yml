@@ -1,0 +1,32 @@
+name: Stale PR Reminder
+
+on:
+  schedule:
+    - cron: '0 12 * * *' # Run every day at 12:00 UTC
+
+jobs:
+  stale-reminder:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Determine staleness
+      uses: JasonEtco/check-if-merged@v1
+      with:
+        stale-phrase: 'inactive'
+        days-before-stale: 7
+        days-before-close: 14
+
+    - name: Send reminder
+      uses: peter-evans/sendmail@v2
+      with:
+        to: ${{ github.event.pull_request.user.login }}@example.com
+        subject: 'Reminder: Your pull request needs attention'
+        message: |
+          Hi ${{ github.event.pull_request.user.login }},
+          
+          This is a friendly reminder that your pull request (#${{ github.event.pull_request.number }}) has been inactive for 7 days and will be marked as stale in 7 more days if no further activity occurs. If you need more time to work on this, please let us know.
+          
+          Thank you for your contributions!
+          
