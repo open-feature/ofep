@@ -12,21 +12,10 @@ jobs:
       uses: actions/checkout@v2
 
     - name: Determine staleness
-      uses: JasonEtco/check-if-merged@v1
+      uses: actions/stale@v5
       with:
         stale-phrase: 'inactive'
+        stale-pr-message: 'This PR is stale because it has been open 30 days with no activity. Remove stale label or comment or this will be closed in next 60 days.'
+        close-pr-message: 'This PR was closed because it has been stalled for 90 days with no activity. You could reopen the PR if you still would like to work on it, and please make sure to have some kind of activity in your PR , as leaving it stalled for too long would result in the PR being closed.'
         days-before-stale: 30
         days-before-close: 90
-
-    - name: Send reminder
-      uses: peter-evans/sendmail@v2
-      with:
-        to: ${{ github.event.pull_request.user.login }}@example.com
-        subject: 'Reminder: Your pull request needs attention'
-        message: |
-          Hi ${{ github.event.pull_request.user.login }},
-          
-          This is a friendly reminder that your pull request (#${{ github.event.pull_request.number }}) has been inactive for 7 days and will be marked as stale in 7 more days if no further activity occurs. If you need more time to work on this, please let us know.
-          
-          Thank you for your contributions!
-          
