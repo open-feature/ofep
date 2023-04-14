@@ -10,7 +10,7 @@ As the OpenFeature specification evolves, it's to be expected that some componen
 
 ## Proposal
 
-This OFEP proposes that the [`provider metadata`](https://docs.openfeature.dev/docs/specification/sections/providers#requirement-211) be extended to include optional properties that denote which functions are available on the implementing provider. The SDK can then make intelligent decisions and log warnings if capabilities that are not supported by the provider in question, are used. For example, if an `application author` adds an event handler but the registered provider doesn't support events, the SDK can log a warning.
+This OFEP proposes that the [`provider metadata`](https://openfeature.dev/docs/specification/sections/providers#requirement-211) be extended to include optional properties that denote which functions are available on the implementing provider. The SDK can then make intelligent decisions and log warnings if capabilities that are not supported by the provider in question, are used. For example, if an `application author` adds an event handler but the registered provider doesn't support events, the SDK can log a warning.
 
 ### Example Implementation
 
