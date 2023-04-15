@@ -15,6 +15,6 @@ jobs:
       uses: actions/stale@v5
       with:
         stale-pr-message: 'This PR is stale because it has been open 30 days with no activity. Remove stale label or comment or this will be closed in next 60 days.'
-        close-pr-message: 'This PR was closed automatically because there hasn't been any activity for 90 days. You can reopen the PR if you would like to continue to work on it.'
+        close-pr-message: 'This PR was closed automatically because there has not been any activity for 90 days. You can reopen the PR if you would like to continue to work on it.'
         days-before-stale: 30
         days-before-close: 90
