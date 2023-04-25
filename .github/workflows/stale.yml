@@ -1,0 +1,25 @@
+name: Stale Issue/PR Reminder
+
+on:
+  schedule:
+    - cron: '0 12 * * *' # Run every day at 12:00 UTC
+
+jobs:
+  stale-reminder:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Determine staleness
+      uses: actions/stale@v5
+      with:
+        
+        stale-pr-message: 'This PR is stale because it has been open 30 days with no activity. Remove stale label or comment or this will be closed in next 60 days.'
+        close-pr-message: 'This PR was closed automatically because there has not been any activity for 90 days. You can reopen the PR if you would like to continue to work on it.'
+
+        stale-issue-message: 'This issue is stale because it has been open 30 days with no activity. Remove stale label or comment or this will be closed in next 60 days.'
+        close-issue-message: 'This issue was closed automatically because there has not been any activity for 90 days. You can reopen the issue if you would like to continue to work on it.'
+
+        days-before-stale: 30
+        days-before-close: 90
