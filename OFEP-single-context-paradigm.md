@@ -1,6 +1,6 @@
 ## OFEP-single-context-paradigm
 
-## State: DRAFTING
+## State: APPROVED
 
 This draft outlines a "single-context" paradigm - an alternative pattern and set of APIs supporting client use-cases.
 
