@@ -13,7 +13,7 @@ metrics. Providing telemetry data out of the box will make OpenFeature attractiv
 ## Proposal
 
 The proposal here is to define a set of metrics that can be used with different hook stages. For example, error metrics 
-can e collected at hook's `error` stage. Going with this background, I propose the following metrics.
+can be collected at the hook's `error` stage. Going with this background, I propose the following metrics.
 
 ### evaluationRequests
 
