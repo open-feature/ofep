@@ -39,7 +39,7 @@ non-zero value.
 
 ### Semantic conventions 
 
-All above metrics should carry OpenTelemetry semantic convention defined attributes [3] so that any metric processor 
+All above metrics should carry OpenTelemetry semantic conventions defined attributes [3] so that any metric processor 
 can reliably process metrics produced by the hook.
 
 ## Example
