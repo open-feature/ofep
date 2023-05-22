@@ -52,7 +52,7 @@ Consider following coding example in Go.
 	var reader metric.Reader
 
 	// Derive metric hook from reader
-	metricsHook, := hooks.NewMetricsHook(reader)
+	metricsHook := hooks.NewMetricsHook(reader)
 
 	// Register OpenFeature API hooks
 	openfeature.AddHooks(metricsHook)
