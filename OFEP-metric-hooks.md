@@ -48,7 +48,7 @@ Consider following coding example in Go.
 
 ```go
 
-    // Reader should be derived or injected 
+        // Reader should be derived or injected 
 	var reader metric.Reader
 
 	// Derive metric hook from reader
