@@ -20,7 +20,7 @@ All metrics defined through this proposal carry OpenTelemetry semantic conventio
 
 - feature_flag.key: The unique identifier of the feature flag
 - feature_flag.provider_name: The name of the service provider that performs the flag evaluation
-- feature_flag.variant:    SHOULD be a semantic identifier for a value. If one is unavailable, a stringified version of
+- feature_flag.variant: SHOULD be a semantic identifier for a value. If one is unavailable, a stringified version of
   the value can be used
 
 Given below is the list of metrics proposed and their usage,
