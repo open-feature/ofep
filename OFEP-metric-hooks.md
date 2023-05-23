@@ -25,14 +25,14 @@ All metrics defined through this proposal carry OpenTelemetry semantic conventio
 
 Given below is the list of metrics proposed and their usage,
 
-### feature_flag.evaluation_requests
+### feature_flag.evaluation_request_total
 
 A counter[2] based metric to calculate the number of flag evaluation requests. This is recorded at `before` stage of
 the hook.
 
 This metric is useful to understand flag evaluation requests received through OpenFeature SDK.
 
-### feature_flag.evaluation_success
+### feature_flag.evaluation_success_total
 
 A counter[2] based metric to calculate the number of successful flag evaluations. This is recorded at `after` stage of
 the hook.
@@ -41,7 +41,7 @@ This metric is useful to understand successful flag evaluations. This metric con
 
 - reason : evaluation reason extracted from flag resolution details[3]
 
-### feature_flag.evaluation_error
+### feature_flag.evaluation_error_total
 
 A counter[2] based metric to calculate the number of failed flag evaluations. This is recorded at `error` stage of
 the hook.
@@ -50,7 +50,7 @@ This metric is useful to understand flag evaluation errors. This metric contain 
 
 - exception : error/exception message extracted from the evaluation error
 
-### feature_flag.evaluation_active
+### feature_flag.evaluation_active_count
 
 An UpDownCounter[4] based metric to calculate the number of active flag evaluations currently going through
 OpenFeature SDK. This is increased at `before` stage and decreased at `finally` stage.
