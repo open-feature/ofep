@@ -58,9 +58,34 @@ OpenFeature SDK. This is increased at `before` stage and decreased at `finally` 
 Given the evaluation is fast, the value observed here can be 0. However, when there are bottlenecks or provider
 slowdowns, this will be a non-zero value.
 
+## Expansion options
+
+Given below are future expansions that can be build on top of the metrics hook. These options will not be
+implemented as they require further discussions and agreements from the community.
+
+### Metric to measure latency
+
+credits - Justin Abrahms
+
+Flag evaluation latency can be calculated with time measurements between `finally` and `before` stages. However,
+this requires time measurement to be shared between two stages, which require either a context propagation or a shared
+variable (potentially a map). Alternatively, SDK could mark the evaluation start timestamp to enhance the accuracy
+of the measurement
+
+### Scope dimension
+
+credits - Michael Beemer
+
+It is possible to add an additional dimension representing the configuration of the feature flag being evaluated. A
+feature flag usually has a scope such as a project, workspace, namespace, or application. This can be further
+expanded to environment-specific configurations such as dev, hardening, and production or the cloud provider such as
+AWS, Azure or GCP. Adding this dimension through an agreed attribute name (suggested name - `scope`) benefits metric
+evaluations (ex:- drill down to cloud provider specific flag evaluations)
+
+
 ## Example
 
-Consider following coding example in Go.
+Consider following coding example in Go for usage of the hook.
 
 ```go
 
@@ -73,6 +98,8 @@ metricsHook := hooks.NewMetricsHook(reader)
 // Register OpenFeature API hooks
 openfeature.AddHooks(metricsHook)
 ```
+
+Injected `metric.Reader` will perform the metric export and API is simple enough for developers.
 
 ### References
 
