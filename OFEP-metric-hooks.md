@@ -37,7 +37,7 @@ This metric is useful to understand flag evaluation requests received through Op
 A counter[2] based metric to calculate the number of successful flag evaluations. This is recorded at `after` stage of
 the hook.
 
-This metric is useful to understand successful flag evaluations. This metric contain following extra dimension(s),
+This metric is useful for understanding successful flag evaluations. This metric contains the following extra dimension(s),
 
 - reason : evaluation reason extracted from flag resolution details[3]
 
