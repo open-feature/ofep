@@ -58,6 +58,33 @@ OpenFeature SDK. This is increased at `before` stage and decreased at `finally` 
 Given the evaluation is fast, the value observed here can be 0. However, when there are bottlenecks or provider
 slowdowns, this will be a non-zero value.
 
+## Extra dimensions
+
+If needed, extra dimensions can be added to any of the above metrics. To provide this flexibility, language specific
+implementations should support constructor options to the hook. For example, in Go, this can look like below,
+
+```go
+NewMetricsHook(reader,
+    WithFlagMetadataDimensions(
+        DimensionDescription{
+            Key:  "scope",
+            Type: String,
+        }))
+```
+
+Given below are proposed extra dimensions.
+
+### Scope (mapped from flag metadata)
+
+credits - Michael Beemer
+
+It is possible to add an additional dimension representing the configuration of the feature flag being evaluated. A
+feature flag usually has a scope such as a project, workspace, namespace, or application. This can be further
+expanded to environment-specific configurations such as dev, hardening, and production or the cloud provider such as
+AWS, Azure or GCP. Adding this dimension through an agreed attribute name (suggested name - `scope`) benefits metric
+evaluations (ex:- drill down to cloud provider specific flag evaluations).
+
+
 ## Expansion options
 
 Below are future expansions that can be built on top of the metrics hook. These options will not be
@@ -72,18 +99,13 @@ this requires time measurement to be shared between two stages, which require ei
 variable (potentially a map). Alternatively, SDK could mark the evaluation start timestamp to enhance the accuracy
 of the measurement
 
-### Scope dimension
+## Implementation considerations
 
-credits - Michael Beemer
+Most of the OpenFeature SDKs already have support for Span hooks. The metrics hook proposed through this OFEP should be 
+implemented into the same package to reduce release and maintenance efforts. However, if there is a significant 
+impact (ex:- dependency size for example in java jar), then the implementation may be done in a dedicated package.
 
-It is possible to add an additional dimension representing the configuration of the feature flag being evaluated. A
-feature flag usually has a scope such as a project, workspace, namespace, or application. This can be further
-expanded to environment-specific configurations such as dev, hardening, and production or the cloud provider such as
-AWS, Azure or GCP. Adding this dimension through an agreed attribute name (suggested name - `scope`) benefits metric
-evaluations (ex:- drill down to cloud provider specific flag evaluations)
-
-
-## Example
+## Code Example
 
 Consider following coding example in Go for usage of the hook.
 
