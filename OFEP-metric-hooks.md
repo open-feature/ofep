@@ -43,7 +43,7 @@ This metric is useful for understanding successful flag evaluations. This metric
 
 ### feature_flag.evaluation_error_total
 
-A counter[2] based metric to calculate the number of failed flag evaluations. This is recorded at `error` stage of
+A counter[2] based metric to calculate the number of failed flag evaluations. This is recorded at the `error` stage of
 the hook.
 
 This metric is useful to understand flag evaluation errors. This metric contain following extra dimension(s),
