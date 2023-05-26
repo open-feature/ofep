@@ -60,7 +60,7 @@ slowdowns, this will be a non-zero value.
 
 ## Expansion options
 
-Given below are future expansions that can be build on top of the metrics hook. These options will not be
+Below are future expansions that can be built on top of the metrics hook. These options will not be
 implemented as they require further discussions and agreements from the community.
 
 ### Metric to measure latency
