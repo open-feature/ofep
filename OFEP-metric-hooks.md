@@ -2,7 +2,7 @@
 
 ## State: PENDING REVIEW
 
-This OFEP propose to introduce OpenFeature hook for OpenTelemetry metrics.
+This OFEP proposes to introduce an OpenFeature hook for OpenTelemetry metrics.
 
 ## Background
 
