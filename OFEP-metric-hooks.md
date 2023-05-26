@@ -7,7 +7,7 @@ This OFEP proposes to introduce an OpenFeature hook for OpenTelemetry metrics.
 ## Background
 
 We already have OpenTelemetry Span support through hooks. Similarly, we can provide a dedicated hook for OpenTelemetry
-metrics. Providing telemetry data out of the box will make OpenFeature attractive for both users and vendors.
+metrics. Providing an easy method to collect standardized telemetry data will make OpenFeature attractive for both users and vendors.
 
 ## Proposal
 
