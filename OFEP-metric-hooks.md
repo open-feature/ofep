@@ -46,7 +46,7 @@ This metric is useful for understanding successful flag evaluations. This metric
 A counter[2] based metric to calculate the number of failed flag evaluations. This is recorded at the `error` stage of
 the hook.
 
-This metric is useful to understand flag evaluation errors. This metric contain following extra dimension(s),
+This metric is useful for understanding flag evaluation errors. This metric contains the following extra dimension(s),
 
 - exception : error/exception message extracted from the evaluation error
 
