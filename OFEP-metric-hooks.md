@@ -1,6 +1,6 @@
 ## OFEP-hook-for-metrics
 
-## State: PENDING REVIEW
+## State: APPROVED
 
 This OFEP proposes to introduce an OpenFeature hook for OpenTelemetry metrics.
 
