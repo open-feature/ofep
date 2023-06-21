@@ -1,4 +1,4 @@
-// assigns reviewers to the PR based on the category of the [Proposal] issue
+// assigns reviewers based on the category of the [Proposal] issue
 const { Octokit } = require("@octokit/rest");
 
 async function assignReviewers(org,repo, prNumber, category) {
