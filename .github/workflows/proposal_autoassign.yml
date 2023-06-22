@@ -1,5 +1,5 @@
 name: Auto-assignment
-# description: Auto assignment of reviewers based on the proposal
+# Auto assignment of reviewers based on the proposal
 
 on:
   issues:
@@ -12,12 +12,12 @@ jobs:
 
         steps:
           - name: Check out code
-            uses: actions/checkout@v2
+            uses: actions/checkout@v3
             
           - name: Set up Node.js
-            uses: actions/setup-node@v2
+            uses: actions/setup-node@v3
             with:
-                node-version: '14'
+                node-version: '18.x' 
             
           - name: Install dependencies
             run: |
@@ -31,13 +31,11 @@ jobs:
               category3=$(echo "${{ github.event.issue.body }}" | grep -e "Category" -A2 | grep -v "Category" | grep "\S")
               echo "category=$category3" >> "$GITHUB_OUTPUT"
             shell: bash
-            env:
-              GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
             
           - name: Run auto-assignment script
             if: ${{steps.check_proposal_label.outputs.has_proposal_label == 'true'}}
-            run: node assign_reviewers.js ${{ github.repository }} ${{ github.event.issue.number }} "${{ steps.check_proposal_label.outputs.category }}"
+            run: node .github/workflows/assign_reviewers.js ${{ github.repository }} ${{ github.event.issue.number }} "${{ steps.check_proposal_label.outputs.category }}"
             env:
-              GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+              TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
             
