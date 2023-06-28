@@ -26,11 +26,12 @@ That makes it ideal for open source projects that need a vendor-agnostic solutio
 - Create a new proto schema that defines a general RPC-based flag evaluation based on the OpenFeature provider specification.
 - Publish the proto schema to the [Buf registry](https://buf.build/open-feature)
 - Create RPC providers for every OpenFeature SDK
-- Create flag evaluation server implementations
+- Create reference flag evaluation server implementations
   - flagd
   - Go Feature Flag
 - Write documentation on how to create a new flag evaluation server.
-- Extend the OpenFeature ecosystem register to include flag evaluation server implementations.
+- Support feature flag vendors in creating a flag evaluation service.
+- Extend the OpenFeature ecosystem registry to include flag evaluation server implementations.
 - Integrate with various open source projects looking to include feature flags.
 
 ## Prior art and alternatives
