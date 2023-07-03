@@ -34,7 +34,7 @@ The flagD project aims to provide a developer-focused, cloud-native, lightweight
 * **Extensible** means that other projects and feature management tools can integrate easily using well-defined interfaces for rule evaluation requests and rule set definition. 
 * **OpenFeature compliance** means flagd serves as a production-ready reference implementation of the OpenFeature specification and demonstrates the value of an open standard for feature flagging.
 
-The following topics are out of scope for the flagD projects
+The following topics are out of scope for the flagD projects:
 * Identity, storage, and attestation mechanisms
 * Distributed architecture ( High availability quorum, voting, leader/follower, failover mechanics)
 * Vendor modules dependencies
