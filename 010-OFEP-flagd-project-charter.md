@@ -32,7 +32,7 @@ The flagD project aims to provide a developer-focused, cloud-native, lightweight
 * **Cloud-native** means it focuses on seamless, standardised integration with cloud-native tools and practices like GitOps. * These components - like the operator - make the integration easy but are not required. 
 * **Lightweight** means that flagD provides a compact and executable binary with a design focus on simplicity and ultra-fast, low-latency execution. flagD is implemented as a stateless, highly-scalable service which only requires a local flag definition or a configured endpoint to acquire the definition. 
 * **Extensible** means that other projects and feature management tools can integrate easily using well-defined interfaces for rule evaluation requests and rule set definition. 
-* **OpenFeature compliance** means flagd serves as a production-ready reference implementation of the OpenFeature specification and demonstrates the value of an open standard for feature flagging
+* **OpenFeature compliance** means flagd serves as a production-ready reference implementation of the OpenFeature specification and demonstrates the value of an open standard for feature flagging.
 
 The following topics are out of scope for the flagD projects
 * Identity, storage, and attestation mechanisms
