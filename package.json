@@ -2,18 +2,20 @@
   "name": "ofep",
   "version": "1.0.0",
   "description": "A focal point for OpenFeature research, proposals and requests for comments",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/open-feature/ofep.git"
   },
+  "dependencies": {
+    "@octokit/rest": "^19.0.13"
+  },
   "author": "",
-  "license": "ISC",
+  "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/open-feature/ofep/issues"
   },
-  "homepage": "https://github.com/open-feature/ofep#readme"
+  "homepage": "https://github.com/open-feature/ofep#readme",
+  "engines": {
+    "node": ">= 18.0.0"
+  }
 }
