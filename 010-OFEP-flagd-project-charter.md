@@ -15,7 +15,7 @@ Therefore, the project should become a full sub-project of open feature.
 
 ## Proposal
 
-flagD will become a dedicated sub project of the OpenFeature project. Documentation for flagD and all examples for OpenFeature will be moved to a dedicted space under the newly created domain ``openfeature.dev``.
+flagD will become a dedicated sub project of the OpenFeature project. Documentation for flagD and all examples for OpenFeature will be moved to a dedicted space under the newly created domain ``flagd.dev``.
 
 The sub project gets it's own dedicated charter to ensure the project has clearly defined goals and scope. As a sub project flagD will have its own maintainers but will still be under the governance of the OpenFeature project. 
 
