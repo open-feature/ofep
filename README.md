@@ -3,7 +3,7 @@
 This repository serves as a focal point for research and experimental work.
 It also enables the creation of discussions, proposals and ideation through issues.
 
-We use OFEP: Open Feature Enhancement proposals, which comes from the lineage of [PEP](https://peps.python.org/pep-0001/) much like the Kubernetes project uses [KEP](https://github.com/OpenFeature/enhancements/blob/master/keps/README.md) and Open-Telemetry project uses [OTEP](https://github.com/open-telemetry/oteps/blob/main/README.md).
+We use OFEP: Open Feature Enhancement proposals, which comes from the lineage of [PEP](https://peps.python.org/pep-0001/) much like the Kubernetes project uses [KEP](https://github.com/kubernetes/enhancements/blob/master/keps/README.md) and Open-Telemetry project uses [OTEP](https://github.com/open-telemetry/oteps/blob/main/README.md).
 
 ## Is My Thing an enhancement?
 
