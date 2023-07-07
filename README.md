@@ -17,6 +17,7 @@ An enhancement is anything that:
 - needs significant effort or changes OpenFeature in a significant way (eg. something that would take 10 person-weeks to implement, introduce or redesign a system component, or introduces Specification changes)
 - impacts the UX or operation of OpenFeature substantially such that engineers using OpenFeature will need retraining
 - users will notice and come to rely on
+- impacts multiple implementations or languages
 
 It is unlikely an enhancement if it is:
 - rephrasing, grammatical fixes, typos, etc
