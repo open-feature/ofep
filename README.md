@@ -52,7 +52,7 @@ While OFEPs are intended for "significant" changes, we recommend trying to keep 
 - The initial `status` of an OFEP should be in `drafting` or `pending for review` stage.
 - An OFEP is `approved` when atleast two/three reviewers github-approve the PR but this surely depends on its nature. The OFEP is then merged.
 - If an OFEP is `rejected` or `withdrawn`, the PR is closed. Note that these OFEPs submissions are still recorded, as Github retains both the discussion and the proposal, even if the branch is later deleted.
-- If an OFEP discussion becomes long, and the OFEP then goes through a major revision, the next version of the OFEP can be posted as a new PR, which references the old PR. The old PR is then closed. This makes OFEP review easier to follow and participate in.
+- If an OFEP discussion becomes long, or the OFEP then goes through a major revision, the next version of the OFEP can be posted as a new PR, which references the old PR. The old PR is then closed. This makes OFEP review easier to follow and participate in.
 
 ## Implementing the OFEP
 
