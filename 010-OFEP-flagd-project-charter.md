@@ -1,6 +1,6 @@
 ## Make flagD a full sub-project of OpenFeature
 
-## State: PENDING REVIEW
+## State: APPROVED
 
 
 This OFEP proposes to make flagD a full subproject of OpenFeature. The project will get a dedicated website, documentation, roadmap and charter. 
