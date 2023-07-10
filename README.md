@@ -37,7 +37,7 @@ While OFEPs are intended for "significant" changes, we recommend trying to keep 
 ## Discussing the OFEP
 
 - As soon as the above-mentioned issue is created, potential reviewers (based on the `category of proposal` specified in the issue) would be automatically asked for review. This is done as a preventive measure to avoid long-winded and open-ended discussions in the early design phase of the proposal but the OFEP author should use their discretion here.
-- The OFEP author may choose any place for discussions but needs to be linked to the issue. The suggested ones include continuing in the same GitHub issue or creating a thread on Slack(https://cloud-native.slack.com/archives/C0344AANLA1) mentioning the issue. 
+- The OFEP author may choose any place for discussions but needs to be linked to the issue. The suggested ones include continuing in the same GitHub issue or creating a thread on [Slack](https://cloud-native.slack.com/archives/C0344AANLA1) mentioning the issue. 
 - The OFEP authors are responsible for collecting community feedback on an OFEP before submitting it as a proposal for review. 
 
 ## Submitting the OFEP and life-cycle
@@ -53,6 +53,6 @@ While OFEPs are intended for "significant" changes, we recommend trying to keep 
 
 ## Implementing the OFEP
 
-Some accepted OFEPs represent vital features that need to be implemented right away. Other accepted OFEPs can represent features that can wait until  community member decides to implement the functionality. Every accepted OFEP has an associated issue tracking its implementation in the specific repository.
+Some accepted OFEPs represent vital features that need to be implemented right away. Other accepted OFEPs can represent features that can wait until a community member decides to implement the functionality. Every accepted OFEP has an associated issue tracking its implementation in the specific repository.
 
 The author of an OFEP is not obligated to implement it. Of course, the OFEP author (like any other developer) is welcome to post an implementation for review after the OFEP has been accepted.
