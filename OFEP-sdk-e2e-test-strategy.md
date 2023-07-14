@@ -15,8 +15,8 @@ The current approach however comes with a problem. As SDK tests rely on flagd, t
 This means,
 
 - SDK cannot introduce tests till flagd contribution is there
-- Breaking changes require disabling e2e tests till
-  - Change propagate to respective SKD contribution repository
+- Breaking changes require disabling e2e tests until
+  - Changes propagate to respective SDK contribution repository
   - flagd implements the breaking change
 - Cannot write tests till
   - flagd implements the feature
