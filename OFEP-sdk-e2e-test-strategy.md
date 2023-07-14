@@ -27,7 +27,7 @@ harder to maintain in the long run.
 ## Proposal
 
 Given OpenFeature has a lot of community interest and SDKs, I am proposing to introduce a simplified e2e test strategy.
-The test strategy must comply with the following,
+The test strategy must comply with the following:
 
 - Tests must not use mocks and must run against an OpenFeature compliant provider
 - Tests must be self-contained except for test definitions which are common to all SDKs
