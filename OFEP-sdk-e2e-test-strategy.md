@@ -12,7 +12,7 @@ For testing of the SDKs, current approach uses gherkin step definitions [2] cont
 And the test implementations use a real instance of flagd [4] to validate test rules.
 
 The current approach however comes with a problem. As SDK tests rely on flagd, these tests rely on SDK contributions [5].
-This means,
+This means:
 
 - SDK cannot introduce tests till flagd contribution is there
 - Breaking changes require disabling e2e tests until
