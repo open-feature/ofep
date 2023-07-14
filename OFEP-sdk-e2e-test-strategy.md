@@ -14,7 +14,7 @@ And the test implementations use a real instance of flagd [4] to validate test r
 The current approach however comes with a problem. As SDK tests rely on flagd, these tests rely on SDK contributions [5].
 This means:
 
-- SDK cannot introduce tests till flagd contribution is there
+- SDK cannot introduce tests until flagd contribution is there
 - Breaking changes require disabling e2e tests until
   - Changes propagate to respective SDK contribution repository
   - flagd implements the breaking change
