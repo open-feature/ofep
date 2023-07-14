@@ -42,7 +42,7 @@ I am proposing following features for the in-memory provider,
 - Flag structure definition will be based on test requirements and must be minimal
 - Provider is initiated with a pre-defined set of flags provided to constructor
 - EvaluationContext support should be provided through callbacks/lambda expressions to minimize implementation
-- Must provider SDK contract implementations where needed (ex:- consider `NoOpProvider` [7])
+- Must provide SDK contract implementations where needed (ex:- consider `NoOpProvider` [7])
 - Must continue to support new spec enhancements. For example, support for events
 - Test provider and related implementations should reside under a testing package [8] [9]
 
