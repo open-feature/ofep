@@ -40,8 +40,7 @@ jobs:
                 numOfAssignee: 10
                 removePreviousAssignees: true
                 allowSelfAssign: true
-            env:
-              TOKEN: ${{ secrets.GITHUB_TOKEN }}
+                repo-token: ${{ secrets.GITHUB_TOKEN }}
           
           - if: ${{ (steps.check_proposal_label_1.outputs.category == 'Flagd') || (steps.check_proposal_label_1.outputs.category == 'OpenFeatureOperator')}}
             name: 'Auto-assign issue2'
@@ -51,8 +50,7 @@ jobs:
                 numOfAssignee: 5
                 removePreviousAssignees: true
                 allowSelfAssign: true
-            env:
-              TOKEN: ${{ secrets.GITHUB_TOKEN }}
+                repo-token: ${{ secrets.GITHUB_TOKEN }}
           
 
 
