@@ -1,40 +1,60 @@
-name: Auto-assignment
-# Auto assignment of reviewers based on the proposal
+name: Issue assignment
 
 on:
-  issues:
-    types:
-        - opened
-        - edited
+    issues:
+        types: [opened,edited]
+
 jobs:
-    assign_reviewers:
+    auto-assign:
         runs-on: ubuntu-latest
-
+        permissions:
+            issues: write
         steps:
-          - name: Check out code
-            uses: actions/checkout@v3
-            
-          - name: Set up Node.js
-            uses: actions/setup-node@v3
-            with:
-                node-version: '18.x' 
-            
-          - name: Install dependencies
-            run: |
-              npm install
-
           - name: Check if issue has [Proposal] label
             id: check_proposal_label
             run: |
-              echo "has_proposal_label=${{ contains(github.event.issue.title, 'proposal') }}" >> "$GITHUB_OUTPUT"
-              category3=$(echo "${{ github.event.issue.body }}" | grep -e "Category" -A2 | grep -v "Category" | grep "\S")
-              echo "category=$category3" >> "$GITHUB_OUTPUT"
+                echo "has_proposal_label=${{ contains(github.event.issue.title, 'proposal') }}" >> "$GITHUB_OUTPUT"
             shell: bash
-            
-          - name: Run auto-assignment script
-            if: ${{steps.check_proposal_label.outputs.has_proposal_label == 'true'}}
-            run: node .github/workflows/assign_reviewers.js ${{ github.repository }} ${{ github.event.issue.number }} "${{ steps.check_proposal_label.outputs.category }}"
+
+          - if: ${{steps.check_proposal_label.outputs.has_proposal_label == 'true'}}
+            name: Run auto-assignment script
+            id: check_proposal_label_1
+            run: |
+                category3=$(echo "${{ github.event.issue.body }}" | grep -e "Category" -A2 | grep -v "Category" | grep "\S" | tr -d " \t\n\r" | tr -d '"')
+                echo "category=$category3" >> "$GITHUB_OUTPUT"
+            shell: bash
+
+          - if: ${{ (steps.check_proposal_label_1.outputs.category == 'SDKs') || (steps.check_proposal_label_1.outputs.category == 'Specification')}}
+            name: 'Auto-assign issue1'
+            uses: pozil/auto-assign-issue@v1
+            with:
+                teams: |
+                  sdk-dotnet-maintainers
+                  sdk-golang-maintainers
+                  sdk-java-maintainers
+                  sdk-javascript-maintainers
+                  sdk-python-maintainers
+                  sdk-ruby-maintainers
+                  sdk-rust-maintainers
+                  sdk-php-maintainers
+                numOfAssignee: 10
+                removePreviousAssignees: true
+                allowSelfAssign: true
             env:
               TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          
+          - if: ${{ (steps.check_proposal_label_1.outputs.category == 'Flagd') || (steps.check_proposal_label_1.outputs.category == 'OpenFeatureOperator')}}
+            name: 'Auto-assign issue2'
+            uses: pozil/auto-assign-issue@v1
+            with:
+                teams: cloud-native-maintainers
+                numOfAssignee: 5
+                removePreviousAssignees: true
+                allowSelfAssign: true
+            env:
+              TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          
+
+
 
             
