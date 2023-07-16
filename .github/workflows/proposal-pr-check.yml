@@ -1,0 +1,33 @@
+name: CI
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+   changed_files:
+    runs-on: ubuntu-latest 
+    name: Test added-OFEP proposals for status
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0 
+
+      - name: Get added files
+        id: added-files
+        uses: tj-actions/changed-files@v37
+        
+      - name: List all added files
+        id: list-added-files
+        run: |
+          for file in ${{ steps.added-files.outputs.added_files }}; do
+            echo "$file was added"
+            echo "status=$(grep -e "State" "$file" | tr -d "## State: " | tr -d '"')" >> "$GITHUB_OUTPUT"
+          done
+
+      - if: ${{ (steps.list-added-files.outputs.status != 'REJECTED') && (steps.list-added-files.outputs.status != 'WITHDRAWN') && (steps.list-added-files.outputs.status != 'APPROVED') }}
+        name: Exit with error
+        run: |
+          echo "status is not approved"
+          exit 1
