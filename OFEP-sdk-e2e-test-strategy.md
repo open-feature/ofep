@@ -21,8 +21,7 @@ This means:
 - Cannot write tests till
   - flagd implements the feature
 
-Besides, there is a circular dependency among `Go SDK` - `Go SDK Contribution` - `flagd` [6] which will become 
-harder to maintain in the long run.
+Besides, there is a circular dependency among `Go SDK` - `Go SDK Contribution` - `flagd` [6] which will become harder to maintain in the long run.
 
 ## Proposal
 
@@ -37,14 +36,16 @@ To fulfill these needs, I am proposing a simple in-memory provider to be built i
 
 ## In-memory provider
 
-I am proposing following features for the in-memory provider,
+In-memory provider should be bundled with SDK and must not have any unique external dependencies, other than the ones coming from SDK itself. 
+While it mainly serves SDK testing, SDK consumers may use it for their use cases. Hence, the packaging, naming and access modifiers must be set appropriately.
+
+With this background, I am proposing following features for the in-memory provider,
 
 - Flag structure definition will be based on test requirements and must be minimal
 - Provider is initiated with a pre-defined set of flags provided to constructor
 - EvaluationContext support should be provided through callbacks/lambda expressions to minimize implementation
 - Must provide SDK contract implementations where needed (ex:- consider `NoOpProvider` [7])
 - Must continue to support new spec enhancements. For example, support for events
-- Test provider and related implementations should reside under a testing package [8] [9]
 
 
 ### References
@@ -56,6 +57,3 @@ I am proposing following features for the in-memory provider,
 [5] - https://github.com/open-feature/java-sdk/blob/main/src/test/java/dev/openfeature/sdk/e2e/StepDefinitions.java#L3
 [6] - https://github.com/open-feature/flagd/blob/main/flagd/go.mod#L69
 [7] - https://github.com/open-feature/java-sdk/blob/main/src/main/java/dev/openfeature/sdk/NoOpProvider.java#L8
-[8] - https://github.com/open-telemetry/opentelemetry-go/tree/c404a30b96f6117ac677c5e15119a4d724e2ab3e/sdk/trace/tracetest
-[9] - https://github.com/open-telemetry/opentelemetry-java/tree/aab71593270111ad3bd01e5e1c44a2e50aacf2c5/sdk/testing
-
