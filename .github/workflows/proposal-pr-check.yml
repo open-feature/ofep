@@ -12,21 +12,31 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         with:
-          fetch-depth: 0 
+          fetch-depth: 0
 
       - name: Get added files
         id: added-files
         uses: tj-actions/changed-files@v37
+        with: 
+          files: |
+            **.md
+      
+      - if: ${{ steps.added-files.outputs.added_files_count == 0 }}
+        name: No check needed
+        run: |
+          echo "No OFEP proposals were added"
+          exit 0
         
       - name: List all added files
         id: list-added-files
+        if: ${{ steps.added-files.outputs.added_files_count != 0 }}
         run: |
           for file in ${{ steps.added-files.outputs.added_files }}; do
             echo "$file was added"
             echo "status=$(grep -e "State" "$file" | tr -d "## State: " | tr -d '"')" >> "$GITHUB_OUTPUT"
           done
 
-      - if: ${{ (steps.list-added-files.outputs.status != 'REJECTED') && (steps.list-added-files.outputs.status != 'WITHDRAWN') && (steps.list-added-files.outputs.status != 'APPROVED') }}
+      - if: ${{ (steps.added-files.outputs.added_files_count != 0) && (steps.list-added-files.outputs.status != 'REJECTED') && (steps.list-added-files.outputs.status != 'WITHDRAWN') && (steps.list-added-files.outputs.status != 'APPROVED') }}
         name: Exit with error
         run: |
           echo "status is not approved"
