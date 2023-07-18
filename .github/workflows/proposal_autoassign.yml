@@ -25,7 +25,7 @@ jobs:
             shell: bash
 
           - if: ${{ (steps.check_proposal_label_1.outputs.category == 'SDKs') || (steps.check_proposal_label_1.outputs.category == 'Specification')}}
-            name: 'Auto-assign issue1'
+            name: 'Auto-assign Spec and SDK Maintainers'
             uses: pozil/auto-assign-issue@v1
             with:
                 teams: |
