@@ -21,12 +21,6 @@ jobs:
           files: |
             **.md
       
-      - if: ${{ steps.added-files.outputs.added_files_count == 0 }}
-        name: No check needed
-        run: |
-          echo "No OFEP proposals were added"
-          exit 0
-        
       - name: List all added files
         id: list-added-files
         if: ${{ steps.added-files.outputs.added_files_count != 0 }}
