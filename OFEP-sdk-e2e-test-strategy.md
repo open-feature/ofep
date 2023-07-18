@@ -47,7 +47,6 @@ With this background, I am proposing following features for the in-memory provid
 - Must provide SDK contract implementations where needed (ex:- consider `NoOpProvider` [7])
 - Must continue to support new spec enhancements. For example, support for events
 
-
 ### References
 
 [1] - https://openfeature.dev/specification/
