@@ -48,7 +48,7 @@ jobs:
             with:
                 teams: cloud-native-maintainers
                 numOfAssignee: 5
-                removePreviousAssignees: true
+                removePreviousAssignees: false
                 allowSelfAssign: true
                 repo-token: ${{ secrets.GITHUB_TOKEN }}
           
