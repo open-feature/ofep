@@ -40,7 +40,7 @@ jobs:
                 numOfAssignee: 10
                 removePreviousAssignees: false
                 allowSelfAssign: true
-                repo-token: ${{ secrets.GITHUB_TOKEN }}
+                repo-token: ${{ secrets.ASSIGN_TEAM }}
           
           - if: ${{ (steps.check_proposal_label_1.outputs.category == 'Flagd') || (steps.check_proposal_label_1.outputs.category == 'OpenFeatureOperator')}}
             name: 'Auto-assign Cloud Native Maintainers'
@@ -50,7 +50,7 @@ jobs:
                 numOfAssignee: 5
                 removePreviousAssignees: false
                 allowSelfAssign: true
-                repo-token: ${{ secrets.GITHUB_TOKEN }}
+                repo-token: ${{ secrets.ASSIGN_TEAM }}
           
 
 
