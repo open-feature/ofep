@@ -1,0 +1,46 @@
+name: OFEP Status Check
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+   changed_files:
+    runs-on: ubuntu-latest 
+    name: Test added-OFEP proposals for status
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Get added files
+        id: added-files
+        uses: tj-actions/changed-files@v37
+        with: 
+          files: |
+            **.md
+          files_ignore: README.md
+      
+      - name: Verify OFEP statuses
+        if: ${{ steps.added-files.outputs.added_files_count > 0 }}
+        run: |
+          #!/bin/bash
+
+          for file in ${{ steps.added-files.outputs.added_files }}; do
+            while IFS= read -r line; do
+              if [[ $line == "## State:"* ]]; then
+                value=${line#*State:}
+                value=${value# } # Remove leading whitespace
+                if [[ "$value" != "REJECTED" && "$value" != "WITHDRAWN" && "$value" != "APPROVED" ]]; then
+                  echo "Unmatched value detected in file: $file"
+                  echo "Detected status: $value"
+                  echo "Please set the status to 'REJECTED', 'WITHDRAWN', or 'APPROVED' before merging."
+                  exit 1
+                fi
+              fi
+            done < "$file"
+          done
+
+          echo "All files checked successfully."
+          exit 0
