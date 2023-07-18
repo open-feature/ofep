@@ -20,6 +20,7 @@ jobs:
         with: 
           files: |
             **.md
+          files_ignore: README.md
       
       - name: Verify OFEP statuses
         if: ${{ steps.added-files.outputs.added_files_count > 0 }}
