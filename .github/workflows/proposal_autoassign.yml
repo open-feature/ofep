@@ -38,7 +38,7 @@ jobs:
                   sdk-rust-maintainers
                   sdk-php-maintainers
                 numOfAssignee: 10
-                removePreviousAssignees: true
+                removePreviousAssignees: false
                 allowSelfAssign: true
                 repo-token: ${{ secrets.GITHUB_TOKEN }}
           
