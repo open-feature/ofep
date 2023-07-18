@@ -1,4 +1,4 @@
-name: CI
+name: OFEP Status Check
 
 on:
   pull_request:
