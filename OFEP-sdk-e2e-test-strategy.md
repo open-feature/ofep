@@ -1,6 +1,6 @@
 ## OFEP: SDK end-to-end test strategy
 
-## State: Drafting
+## State: APPROVED
 
 This OFEP proposes to introduce a simplified process to write SDK end-to-end(e2e) tests
 
