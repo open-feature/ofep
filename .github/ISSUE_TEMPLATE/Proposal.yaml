@@ -2,14 +2,12 @@ name: Enhancement Proposal
 description: Submit a proposal for a new enhancement.
 title: "[Proposal] "
 labels: ["OFEP"] 
-assignees:
-  - beeme1mr
 body:
   - type: markdown
     attributes:
       value: |
         Hi there! Thanks for your interest in submitting a proposal to OpenFeature Enhancement Proposal (OFEP)! We are excited to review your ideas and work with you. We appreciate your time and effort in helping us make our community-driven platform even better.
-        Before filling out the form, please take a moment to review our [Is My thing a Proposal for OFEP?](https://github.com/open-feature/ofep#is-my-thing-a-proposal-for-ofep) section.
+        Before filling out the form, please take a moment to review our [Should I create an OFEP?](https://github.com/open-feature/ofep#should-i-create-an-ofep) section.
         As you draft your proposal, please keep in mind that we value clear and concise language, please make sure to follow common issue etiquette like:
           * title describes the content accurately.
           * sentences are short and clear. 
@@ -31,7 +29,7 @@ body:
     id: overview
     attributes:
       label: Describe your proposal
-      description: Okay, You have our attention! Go ahead and give us the pitch. We are eager to hear your proposal. Please provide us with a summary of your idea and explain how it aligns with OpenFeature’s vision. We are interested in understanding the value it will bring to the community. Thank you for your contribution and we look forward to seeing your vision come to life.
+      description: Please provide us with a summary of your proposal and explain how it aligns with OpenFeature’s mission.
     validations:
       required: true
 

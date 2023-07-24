@@ -1,0 +1,58 @@
+name: Issue assignment
+
+on:
+    issues:
+        types: [opened,edited]
+
+jobs:
+    auto-assign:
+        runs-on: ubuntu-latest
+        permissions:
+            issues: write
+        steps:
+          - name: Check if issue has [Proposal] label
+            id: check_proposal_label
+            run: |
+                echo "has_proposal_label=${{ contains(github.event.issue.title, 'proposal') }}" >> "$GITHUB_OUTPUT"
+            shell: bash
+
+          - if: ${{steps.check_proposal_label.outputs.has_proposal_label == 'true'}}
+            name: Run auto-assignment script
+            id: check_proposal_label_1
+            run: |
+                category3=$(echo "${{ github.event.issue.body }}" | grep -e "Category" -A2 | grep -v "Category" | grep "\S" | tr -d " \t\n\r" | tr -d '"')
+                echo "category=$category3" >> "$GITHUB_OUTPUT"
+            shell: bash
+
+          - if: ${{ (steps.check_proposal_label_1.outputs.category == 'SDKs') || (steps.check_proposal_label_1.outputs.category == 'Specification')}}
+            name: 'Auto-assign Spec and SDK Maintainers'
+            uses: pozil/auto-assign-issue@v1
+            with:
+                teams: |
+                  sdk-dotnet-maintainers
+                  sdk-golang-maintainers
+                  sdk-java-maintainers
+                  sdk-javascript-maintainers
+                  sdk-python-maintainers
+                  sdk-ruby-maintainers
+                  sdk-rust-maintainers
+                  sdk-php-maintainers
+                numOfAssignee: 10
+                removePreviousAssignees: false
+                allowSelfAssign: true
+                repo-token: ${{ secrets.ASSIGN_TEAM }}
+          
+          - if: ${{ (steps.check_proposal_label_1.outputs.category == 'Flagd') || (steps.check_proposal_label_1.outputs.category == 'OpenFeatureOperator')}}
+            name: 'Auto-assign Cloud Native Maintainers'
+            uses: pozil/auto-assign-issue@v1
+            with:
+                teams: cloud-native-maintainers
+                numOfAssignee: 5
+                removePreviousAssignees: false
+                allowSelfAssign: true
+                repo-token: ${{ secrets.ASSIGN_TEAM }}
+          
+
+
+
+            
