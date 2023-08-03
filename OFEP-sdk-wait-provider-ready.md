@@ -43,7 +43,7 @@ Adding a waiting function will allow to block the SDK until the provider is read
 This new function will wait for a `ready` event or a timelimit for the provider to be ready.  
 
 ```javascript
-Openfeature.setProvider(my-provider)
+Openfeature.setProvider(myprovider)
 const client = Openfeature.getClient()
 await client.isReady()
 ```
@@ -53,6 +53,6 @@ Add a chain function to `setProvider(...)` to wait until the intialization is do
 It will wait until the `initialize` function throw or return.
 
 ```javascript
-Openfeature.setProvider(my-provider).waitReady()
+Openfeature.setProvider(myprovider).waitReady()
 const client = Openfeature.getClient()
 ```
