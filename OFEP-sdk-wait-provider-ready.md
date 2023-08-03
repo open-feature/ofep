@@ -10,7 +10,7 @@ The `initialize` function is called asynchronously and it is possible to get the
 
 In some languages such as `javascript` waiting for the event could be one line of code, but on other languages it could need way more boiler plate code to do that.
 ```javascript
-Openfeature.setProvider("my-provider")
+Openfeature.setProvider(my-provider)
 const client = Openfeature.getClient()
 await new Promise((resolve) => client.on(‘ready’, resolve))
 ```
@@ -43,7 +43,7 @@ Adding a waiting function will allow to block the SDK until the provider is read
 This new function will wait for a `ready` event or a timelimit for the provider to be ready.  
 
 ```javascript
-Openfeature.setProvider("my-provider")
+Openfeature.setProvider(my-provider)
 const client = Openfeature.getClient()
 await client.isReady()
 ```
@@ -53,6 +53,6 @@ Add a chain function to `setProvider(...)` to wait until the intialization is do
 It will wait until the `initialize` function throw or return.
 
 ```javascript
-Openfeature.setProvider("my-provider").waitReady()
+Openfeature.setProvider(my-provider).waitReady()
 const client = Openfeature.getClient()
 ```
