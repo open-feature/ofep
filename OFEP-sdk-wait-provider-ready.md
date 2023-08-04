@@ -48,7 +48,7 @@ const client = Openfeature.getClient()
 await client.isReady()
 ```
 
-### Alternative 2: Chain `waitReady()` with `setProvider(...)`
+### Alternative 3: Chain `waitReady()` with `setProvider(...)`
 Add a chain function to `setProvider(...)` to wait until the intialization is done.
 It will wait until the `initialize` function throw or return.
 
