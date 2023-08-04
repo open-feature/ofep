@@ -53,6 +53,6 @@ Add a chain function to `setProvider(...)` to wait until the intialization is do
 It will wait until the `initialize` function throw or return.
 
 ```javascript
-Openfeature.setProvider(myprovider).waitReady()
+await Openfeature.setProvider(myprovider).waitReady()
 const client = Openfeature.getClient()
 ```
