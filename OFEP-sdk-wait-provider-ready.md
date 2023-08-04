@@ -56,3 +56,26 @@ It will wait for the `initialize` function to throw or return.
 await Openfeature.setProvider(myprovider).waitReady()
 const client = Openfeature.getClient()
 ```
+
+### Alternative 4: Add a blocking `setProvider`
+Expose a dedicated blocking `setProvider` along with current async stepProvider.
+
+> GRPC is using this kind of convention:
+> 
+> - Java gRPC expose similar methods - `RouteGuideGrpc.newBlockingStub` vs `RouteGuideGrpc.newStub` [^1] 
+> - In Go, gRPC uses method options that allow blocking calls and timeout based on context [^2]. 
+
+[^1]: https://grpc.io/docs/languages/java/basics/#instantiating-a-stub
+[^2]: https://pkg.go.dev/google.golang.org/grpc#DialContext
+
+```javascript
+// Non blocking setProvider
+Openfeature.setProvider(myprovider)
+
+// Blocking setProvider
+await Openfeature.setProviderAndWait(provider)
+const client = Openfeature.getClient()
+```
+Alternative names for this function can be `setProviderSync`, `setProviderBlocking`, `setProviderAndWait`.
+
+
