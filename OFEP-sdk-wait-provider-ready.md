@@ -1,6 +1,6 @@
 ## OFEP-sdk-wait-provider-ready
 
-## State: DRAFTING
+## State: APPROVED
 Implement a mechanism to wait for the provider to be in a ready state.
 
 ## Background
@@ -30,6 +30,28 @@ completableFuture.get();
 
 ## Proposal
 It would be great to have a way in the SDKs to wait for the provider to be ready.
+
+We expose a dedicated blocking `setProvider` along with current async stepProvider.
+
+### Examples
+```javascript
+// Non blocking setProvider
+Openfeature.setProvider(myprovider)
+
+// Blocking setProvider
+await Openfeature.setProviderAndWait(myprovider)
+const client = Openfeature.getClient()
+```
+
+```java
+// Non blocking setProvider
+OpenFeatureAPI.getInstance().setProvider(myprovider);
+Client cli = OpenFeatureAPI.getInstance().getClient();
+
+// Blocking setProvider
+OpenFeatureAPI.getInstance().setProviderAndWait(myprovider);
+Client cli = OpenFeatureAPI.getInstance().getClient();
+```
 
 
 ## Alternatives
