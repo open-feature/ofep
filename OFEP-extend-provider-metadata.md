@@ -16,7 +16,7 @@ In many flag management tools, there are ways to group related flag configuratio
 A non-exhaustive list includes `organization`, `namespace`, `project`, and `environment`.
 As an example, a `flag key` may have different configurations per `environment`.
 OpenFeature needs a way to capture provider specific metadata so that it can be leveraged by hooks.
-This will allow hooks to provider better troubleshooting and telemetry support.
+This will allow hooks to provide better troubleshooting and telemetry support.
 
 As with flag metadata, different providers will expose different kinds of metadata, and different Application Integrators will want to consume that metadata in different ways.
 As such, the goal of this proposal is to provide a simple way for the OpenFeature runtime to pass generic metadata from a provider to a hook, without OpenFeature itself understanding the semantics of that metadata.
