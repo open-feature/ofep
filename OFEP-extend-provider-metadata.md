@@ -27,7 +27,7 @@ In the future we may wish to standardize the semantics of some key metadata attr
 
 ## Proposal
 
-Extend the [provider metadata](https://openfeature.dev/specification/sections/providers#requirement-211) to allow for a bag of metadata attributes related to the provider itself.
+Extend the [provider metadata](https://openfeature.dev/specification/sections/providers#requirement-211) to allow for a bag of immutable metadata attributes related to the provider itself.
 This bag will be a set of key-value pairs, where the key will be a string and the value will be a small set of primitive values.
 
 `ProviderMetadata` is already defined in the spec.
