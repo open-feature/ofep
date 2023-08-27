@@ -1,0 +1,35 @@
+pull_request_rules:
+  - name: Label the approved PRs
+    conditions:
+      - "#approved-reviews-by>=1"
+    actions:
+      comment:
+        message: "Hello :wave: @{{author}}, The PR is eligible to merge. It will be automerged after 3 working days if not raised any issues."
+      label:
+        add:
+          - automerge
+  - name: Remove the label
+    conditions:
+      - "changes-requested-reviews-by>=1"
+    actions:
+      label:
+        remove:
+          - automerge
+  - name: Merging an approved PR after 3 working days_1
+    conditions:
+      - "#approved-reviews-by>=1"
+      - label=automerge
+      - updated-at<3 days ago
+      - schedule=Thu-Fri 09:00-19:00[America/Vancouver]
+    actions:
+      merge:
+        method: merge
+  - name: Merging an approved PR after 3 working days_2
+    conditions:
+      - "#approved-reviews-by>=1"
+      - label=automerge
+      - updated-at<5 days ago
+      - schedule=Mon-Wed 09:00-19:00[America/Vancouver]
+    actions:
+      merge:
+        method: merge
