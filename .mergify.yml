@@ -7,7 +7,7 @@ pull_request_rules:
       - "check-success=Test added-OFEP proposals for status"
     actions:
       comment:
-        message: "Hello :wave: @{{author}}, The PR is eligible to merge. It will be automerged after 3 working days if not raised any issues."
+       message: "Hello :wave: @{{author}}, this OFEP is eligible to be merged. It will be automatically merged after 3 working days if no objections are raised."
       label:
         add:
           - automerge
