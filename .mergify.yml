@@ -36,6 +36,8 @@ pull_request_rules:
   - name: Merging an approved OFEP on Mon, Tue, or Wed after 3 working days
     conditions:
       - "#approved-reviews-by>=1"
+      - "#changes-requested-reviews-by=0"
+      - "#review-threads-unresolved=0"
       - label=automerge
       - updated-at<5 days ago
       - schedule=Mon-Wed 09:00-19:00[America/Vancouver]
