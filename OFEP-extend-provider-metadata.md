@@ -1,6 +1,6 @@
 ## Extend provider metadata
 
-## State: PENDING REVIEW
+## State: APPROVED
 
 This proposal lays out a mechanism for flag providers to surface arbitrary metadata about themselves to OpenFeature, and for hooks to access this metadata.
 It's similar in concept to flag metadata but works at the provider level.
