@@ -51,6 +51,15 @@ While OFEPs are intended for "significant" changes, we recommend trying to keep 
 - If an OFEP is `rejected` or `withdrawn`, the PR is closed. Note that these OFEPs submissions are still recorded, as GitHub retains both the discussion and the proposal, even if the branch is later deleted.
 - If an OFEP discussion becomes long, or the OFEP then goes through a major revision, the next version of the OFEP can be posted as a new PR, which references the old PR. The old PR is then closed. This makes OFEP review easier to follow and participate in.
 
+### Automerging-flow of an OFEP Pull Request
+
+- Approved OFEP Pull Requests receive the automerge label.
+- A 3-day waiting period starts for objection raising.
+- A comment is also posted on the Pull Request stating the same.
+- Objections lead to the removal of the automerge label.
+- No objections result in auto-merging by Mergify.
+- The project uses [Mergify](https://mergify.com) for this workflow.
+
 ## Implementing the OFEP
 
 Some accepted OFEPs represent vital features that need to be implemented right away. Other accepted OFEPs can represent features that can wait until a community member decides to implement the functionality. Every accepted OFEP has an associated issue tracking its implementation in the specific repository.
