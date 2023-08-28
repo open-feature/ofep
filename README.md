@@ -57,8 +57,7 @@ While OFEPs are intended for "significant" changes, we recommend trying to keep 
 - A 3-day waiting period starts for objection raising.
 - A comment is also posted on the Pull Request stating the same.
 - Objections lead to the removal of the automerge label.
-- No objections result in auto-merging by Mergify.
-- The project uses [Mergify](https://mergify.com) for this workflow.
+- No objections result in auto-merging by [Mergify](https://mergify.com).
 
 ## Implementing the OFEP
 
