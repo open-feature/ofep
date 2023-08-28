@@ -1,0 +1,46 @@
+pull_request_rules:
+  - name: Detect and label OFEPs eligble to be automatically merged
+    conditions:
+      - "#approved-reviews-by>=1"
+      - "#changes-requested-reviews-by=0"
+      - "#review-threads-unresolved=0"
+      - "check-success=Test added-OFEP proposals for status"
+    actions:
+      comment:
+       message: "Hello :wave: @{{author}}, this OFEP is eligible to be merged. It will be automatically merged after 3 working days if no objections are raised."
+      label:
+        add:
+          - automerge
+  - name: Remove the label
+    conditions:
+      - or:
+          - "#approved-reviews-by=0"
+          - "#changes-requested-reviews-by>=1"
+          - "#review-threads-unresolved>=1"
+      - label=automerge
+    actions:
+      label:
+        remove:
+          - automerge
+  - name: Merging an approved OFEP on Thur or Fri after 3 working days
+    conditions:
+      - "#approved-reviews-by>=1"
+      - "#changes-requested-reviews-by=0"
+      - "#review-threads-unresolved=0"
+      - label=automerge
+      - updated-at<3 days ago
+      - schedule=Thu-Fri 09:00-19:00[America/Vancouver]
+    actions:
+      merge:
+        method: merge
+  - name: Merging an approved OFEP on Mon, Tue, or Wed after 3 working days
+    conditions:
+      - "#approved-reviews-by>=1"
+      - "#changes-requested-reviews-by=0"
+      - "#review-threads-unresolved=0"
+      - label=automerge
+      - updated-at<5 days ago
+      - schedule=Mon-Wed 09:00-19:00[America/Vancouver]
+    actions:
+      merge:
+        method: merge
