@@ -1,5 +1,5 @@
 pull_request_rules:
-  - name: Label the approved PRs
+  - name: Detect and label OFEPs eligble to be automatically merged
     conditions:
       - "#approved-reviews-by>=1"
     actions:
