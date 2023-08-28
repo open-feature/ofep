@@ -33,7 +33,7 @@ pull_request_rules:
     actions:
       merge:
         method: merge
-  - name: Merging an approved PR after 3 working days_2
+  - name: Merging an approved OFEP on Mon, Tue, or Wed after 3 working days
     conditions:
       - "#approved-reviews-by>=1"
       - label=automerge
