@@ -2,6 +2,9 @@ pull_request_rules:
   - name: Detect and label OFEPs eligble to be automatically merged
     conditions:
       - "#approved-reviews-by>=1"
+      - "#changes-requested-reviews-by=0"
+      - "#review-threads-unresolved=0"
+      - "check-success=Test added-OFEP proposals for status"
     actions:
       comment:
         message: "Hello :wave: @{{author}}, The PR is eligible to merge. It will be automerged after 3 working days if not raised any issues."
