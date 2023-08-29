@@ -10,7 +10,7 @@ This is an ideal location to store information about the provider that's common 
 
 OpenFeature supports [flag metadata](./007-OFEP-provider-flag-metadata.md) which allows for arbitrary information to be associated with a flag evaluation.
 This works well for data that specific to an individual flag that was successfully evaluated.
-However, it's useful to access arbitrate provider information outside of a successful flag evaluation.
+However, it's useful to access arbitrary provider information outside of a successful flag evaluation.
 
 In many flag management tools, there are ways to group related flag configurations.
 A non-exhaustive list includes `organization`, `namespace`, `project`, and `environment`.
