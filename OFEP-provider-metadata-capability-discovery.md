@@ -1,6 +1,6 @@
 ---
 date: 2023-04-15
-title: Provider-Metadata-Capability-Discovery
+title: Capability discovery for providers
 status: Approved
 authors: [Todd Baert]
 tags: [specification, sdk]
