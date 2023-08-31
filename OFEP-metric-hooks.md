@@ -1,6 +1,6 @@
 ---
 date: 2023-06-01
-title: Hook for Metrics
+title: Hooks for Metrics
 status: Approved
 authors: [Michael Beemer, Todd Baert, Kavindu Dodanduwa, Justin Abrahms, Giovanni Liva]
 tags: [specification, sdk]
