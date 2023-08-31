@@ -44,7 +44,7 @@ While OFEPs are intended for "significant" changes, we recommend trying to keep 
 
 - Once the idea of the proposal is reviewed by the assigned reviewers, the OFEP author can then reference a Pull Request to the issue containing the proposal. 
 - For adding the OFEP as a Pull Request, first, [fork](https://help.github.com/en/articles/fork-a-repo) this [repo](https://github.com/open-feature/ofep).
-- Copy [`000-OFEP-template.md`](./000-OFEP-template.md) to `000-OFEP-my-title.md`, where `my-title` is a title relevant to your proposal, and `000` is the OFEP ID. Leave the number as is for now. Once a Pull Request is made, update this ID to match the next smallest available ID.
+- Copy [`OFEP-template.md`](./OFEP-template.md) to `./OFEP/my-title.md`, where `my-title` is a title relevant to your proposal, and `000` is the OFEP ID. Leave the number as is for now. Once a Pull Request is made, update this ID to match the next smallest available ID.
 - Fill in the template and please take care of the details as followed while creating the issue for Enhancement Proposal.
 - The initial `status` of an OFEP should be in `drafting` or `pending for review` stage.
 - An OFEP is `approved` when atleast two/three reviewers github-approve the PR but this surely depends on its nature. The OFEP is then merged.
