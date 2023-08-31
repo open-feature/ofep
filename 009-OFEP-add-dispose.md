@@ -2,7 +2,7 @@
 date: 2023-05-19
 title: Dispose Functionality To API
 status: Approved
-authors: [Todd Baert ,Weyert de Boer]
+authors: [Todd Baert, Weyert de Boer]
 tags: [api, sdk]
 
 ---
