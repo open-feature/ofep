@@ -1,6 +1,6 @@
 ---
 date: 2022-07-30
-title: Provider Hook
+title: Provider Hooks
 status: Approved
 authors: [Shantanu Sen]
 tags: [sdk]
