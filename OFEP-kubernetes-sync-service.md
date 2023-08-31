@@ -6,7 +6,7 @@ authors: [Alex Jones]
 tags: [flagd, ofo]
 
 ---
-# 004-OFEP-inotfiy-interface
+# Inotfiy Interface
 
 ## State: APPROVED
 

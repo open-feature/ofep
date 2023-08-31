@@ -7,7 +7,7 @@ tags: [cloud-native]
 
 ---
 
-# 001-OFEP-cloud-native-pattern
+# Cloud native pattern
 
 ## State: APPROVED
 

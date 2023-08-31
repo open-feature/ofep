@@ -6,7 +6,7 @@ authors: [Alex Jones]
 tags: [flagd, spec]
 
 ---
-# 003-OFEP-CUE-upstream
+# CUE upstream
 
 ## State: DRAFTING
 

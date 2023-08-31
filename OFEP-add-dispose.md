@@ -6,7 +6,7 @@ authors: [Todd Baert, Weyert de Boer]
 tags: [api, sdk]
 
 ---
-# 009-OFEP-Add dispose functionality to API
+# Add dispose functionality to API
 
 ## State: APPROVED
 

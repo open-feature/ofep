@@ -7,7 +7,7 @@ tags: [flagd]
 
 ---
 
-# 006-OFEP-flagd-sockets
+# Flagd sockets
 
 ## State: APPROVED 
 

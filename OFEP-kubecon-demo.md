@@ -6,7 +6,7 @@ authors: [Alex Jones]
 tags: [flagd, ofo]
 
 ---
-# 002-OFEP-kubecon-demo
+# Kubecon demo
 
 ## State: APPROVED
 

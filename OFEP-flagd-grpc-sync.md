@@ -6,7 +6,7 @@ authors: [Kavindu Dodanduwa]
 tags: [flagd]
 
 ---
-# 010-OFEP-Add gRPC sync support to flagd
+# Add gRPC sync support to flagd
 
 ## State: APPROVED
 

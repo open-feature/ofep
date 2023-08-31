@@ -6,7 +6,7 @@ authors: [Todd Baert]
 tags: [sdk]
 
 ---
-# 017-OFEP-single-context-paradigm
+# Single-context Paradigm
 
 ## State: APPROVED
 

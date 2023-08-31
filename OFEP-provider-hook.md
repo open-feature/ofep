@@ -1,12 +1,12 @@
 ---
 date: 2022-07-30
-title: Provider Hooks
+title: Provider HookS
 status: Approved
 authors: [Shantanu Sen]
 tags: [sdk]
 
 ---
-# 005-OFEP-provider-hook
+# Provider Hooks
 
 ## State: APPROVED
 

@@ -6,7 +6,7 @@ authors: [Michael Beemer, Todd Baert, Justin Abrahms]
 tags: [flagd, sdk]
 
 ---
-# 007-OFEP-flag-change-events
+# Flag change events
 
 ## State: APPROVED
 

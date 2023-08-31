@@ -6,7 +6,7 @@ authors: [Justin Abrahms, Pete Hodgson]
 tags: [flagd]
 
 ---
-# 012-OFEP-Inline Evaluation of Flag Rules
+# Inline Evaluation of Flag Rules
 
 ## State: REJECTED
 

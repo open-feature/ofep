@@ -6,7 +6,7 @@ authors: [Michael Beemer, Todd Baert, Evan Bradley]
 tags: [specification, sdk]
 
 ---
-# 011-OFEP-Transaction Context Propagation
+# Transaction Context Propagation
 
 ## State: APPROVED
 

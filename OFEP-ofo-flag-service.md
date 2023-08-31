@@ -6,7 +6,7 @@ authors: [Skye Gill]
 tags: [flagd, ofo]
 
 ---
-# 013-OFEP-flag service deployment driven by OpenFeature Operator
+# Flag service deployment driven by OpenFeature Operator
 
 ## State: APPROVED
 

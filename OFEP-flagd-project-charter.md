@@ -6,7 +6,7 @@ authors: [Alois Reitbauer]
 tags: [sdk, spec, ofo, flagd]
 
 ---
-# Make flagD a full sub-project of OpenFeature
+# Make FlagD a full sub-project of OpenFeature
 
 ## State: APPROVED
 

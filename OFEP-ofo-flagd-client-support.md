@@ -6,7 +6,7 @@ authors: [Skye Gill]
 tags: [flagd, ofo]
 
 ---
-# 014-OFEP-flagd client support driven by OpenFeature Operator
+# Flagd client support driven by OpenFeature Operator
 
 ## State: WITHDRAWN
 
