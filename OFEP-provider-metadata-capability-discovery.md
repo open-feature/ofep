@@ -6,7 +6,7 @@ authors: [Todd Baert]
 tags: [specification, sdk]
 
 ---
-# 016-OFEP-provider-metadata-capability-discovery
+# Capability discovery for providers
 
 ## State: APPROVED
 
