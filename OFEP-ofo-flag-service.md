@@ -1,4 +1,12 @@
-## flag service deployment driven by OpenFeature Operator
+---
+date: 2023-03-24
+title: Flag Service Deployment by OFO
+status: Approved
+authors: [Skye Gill]
+tags: [flagd, ofo]
+
+---
+# 013-OFEP-flag service deployment driven by OpenFeature Operator
 
 ## State: APPROVED
 

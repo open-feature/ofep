@@ -1,4 +1,12 @@
-## OFEP: Add gRPC sync support to flagd
+---
+date: 2023-02-03
+title: gRPC sync support to Flagd
+status: Approved
+authors: [Kavindu Dodanduwa]
+tags: [flagd]
+
+---
+# 010-OFEP-Add gRPC sync support to flagd
 
 ## State: APPROVED
 
@@ -13,7 +21,8 @@ ISync interface and current sync mechanism implementations.
 
 The gRPC schema will be defined by flagd and supporting flag management system(s) will then implement the contract.
 
-<img src="images/ofep-fd-grpc-1.png" width="300">
+![unlabelled_image](images/ofep-fd-grpc-1.png "unlabelled_image")
+
 
 Further, grpc server push can be expanded to have `event types` such as flag additions, updates and deletions, giving more
 performant connectivity between flagd and flag management system. Performance improvements come from reduced payload
@@ -24,7 +33,7 @@ a state management system to derive the matching event type for a specific flag 
 flagd must not maintain any state (i.e- flagd must be stateless) and only react on the sync type to update flag 
 configurations.
 
-<img src="images/ofep-fd-grpc-2.png" width="300">
+![unlabelled_image](images/ofep-fd-grpc-2.png "unlabelled_image")
 
 ### Tasks
 

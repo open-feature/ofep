@@ -1,12 +1,22 @@
-## NAME
+---
+date: 2022-08-09
+title: Flagd Sockets
+status: Approved
+authors: [Alex Jones]
+tags: [flagd]
 
-## State: ( APPROVED )
+---
+
+# 006-OFEP-flagd-sockets
+
+## State: APPROVED 
 
 Often when flagD is required to talk to another application within the same pod, it is far faster to use a unix socket 
 than the full TCP/IP stack. There are also permission benefits around using a socket in terms of file ownership.
 This OFEP outlines an approach to use gRPC over Unix sockets to enable this.
 
-<img src="images/006-01.png" width="300">
+![unlabelled_image](images/006-01.png "unlabelled_image")
+
 
 ## Background
 

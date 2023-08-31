@@ -1,4 +1,12 @@
-## OFEP-sdk-wait-provider-ready
+---
+date: 2023-08-11
+title: SDK Wait Provider Ready
+status: Approved
+authors: [Michael Beemer, Kavindu Dodanduwa, Thomas Poignant]
+tags: [sdk]
+
+---
+# OFEP-sdk-wait-provider-ready
 
 ## State: APPROVED
 Implement a mechanism to wait for the provider to be in a ready state.

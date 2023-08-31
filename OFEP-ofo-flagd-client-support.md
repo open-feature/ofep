@@ -1,4 +1,12 @@
-## flagd client support driven by OpenFeature Operator
+---
+date: 2023-03-24
+title: Flagd Client Support driven by OFO
+status: Withdrawn
+authors: [Skye Gill]
+tags: [flagd, ofo]
+
+---
+# 014-OFEP-flagd client support driven by OpenFeature Operator
 
 ## State: WITHDRAWN
 

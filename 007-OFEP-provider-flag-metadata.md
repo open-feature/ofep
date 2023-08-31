@@ -1,4 +1,12 @@
-## OFEP-007: Surfacing flag metadata
+---
+date: 2022-11-17
+title: Surfacing Flag Metadata
+status: Approved
+authors: [Pete Hodgson]
+tags: [spec]
+
+---
+# 008-OFEP-Surfacing flag metadata
 
 ## State: APPROVED
 This proposal lays out a mechanism for flag providers to surface arbitrary flag metadata to Open Feature, and for hooks to access this metadata.

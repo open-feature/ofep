@@ -1,4 +1,12 @@
-## 007-OFEP-flag-change-events
+---
+date: 2023-03-14
+title: Flag Change Events
+status: Approved
+authors: [Michael Beemer, Todd Baert, Justin Abrahms]
+tags: [flagd, sdk]
+
+---
+# 007-OFEP-flag-change-events
 
 ## State: APPROVED
 

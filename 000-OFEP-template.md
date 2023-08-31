@@ -1,4 +1,12 @@
-## NAME
+---
+date: 2022-07-21
+title: OFEP Template
+status: Active
+authors: [Alex Jones]
+tags: [template]
+---
+
+# Name
 
 ## State: ( DRAFTING | WITHDRAWN | PENDING REVIEW | APPROVED | REJECTED )
 
