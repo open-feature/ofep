@@ -1,4 +1,4 @@
-## NAME
+## Variations and Variables
 
 ## State: DRAFTING
 
