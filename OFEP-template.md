@@ -3,7 +3,7 @@ date: YYYY-MM-DD
 title: OFEP Template
 status: Active
 authors: []
-tags: [template]
+tags: []
 ---
 
 # Name
