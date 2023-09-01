@@ -1,12 +1,12 @@
 ---
 date: YYYY-MM-DD
 title: OFEP Template
+<!--- 
+Valid statuses: Approved, Rejected, Withdrawn 
+-->
 status: Approved
 authors: []
 tags: []
-<!--- 
-The available status values are : Approved, Pending Review, Rejected, Withdrawn 
--->
 ---
 
 # Name
