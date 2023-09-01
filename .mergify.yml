@@ -32,7 +32,8 @@ pull_request_rules:
       - schedule=Thu-Fri 09:00-19:00[America/Vancouver]
     actions:
       merge:
-        method: merge
+        method: squash
+        commit_message_template: "@{{title}}"
   - name: Merging an approved OFEP on Mon, Tue, or Wed after 3 working days
     conditions:
       - "#approved-reviews-by>=1"
@@ -43,4 +44,5 @@ pull_request_rules:
       - schedule=Mon-Wed 09:00-19:00[America/Vancouver]
     actions:
       merge:
-        method: merge
+        method: squash
+        commit_message_template: "@{{title}}"
