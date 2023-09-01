@@ -4,6 +4,9 @@ title: OFEP Template
 status: Approved
 authors: []
 tags: []
+<!--- 
+The available status values are : Approved, Pending Review, Rejected, Withdrawn 
+-->
 ---
 
 # Name
