@@ -1,4 +1,15 @@
-## NAME
+---
+date: YYYY-MM-DD
+title: OFEP Template
+<!--- 
+Valid statuses: Approved, Rejected, Withdrawn 
+-->
+status: Approved
+authors: []
+tags: []
+---
+
+# Name
 
 ## State: ( DRAFTING | WITHDRAWN | PENDING REVIEW | APPROVED | REJECTED )
 

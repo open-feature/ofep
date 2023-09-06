@@ -1,4 +1,12 @@
-## 003-OFEP-CUE-upstream
+---
+date: 2022-07-12
+title: CUE Upstream
+status: Draft
+authors: [Alex Jones]
+tags: [flagd, spec]
+
+---
+# CUE upstream
 
 ## State: DRAFTING
 
@@ -13,7 +21,8 @@ My proposal here would be to choose a new top-level DSL to define the specificat
 This would mean we could use a single file(s) and toolchain to generate all of the automatically created code for flagD.
 The benefit here would be a single source of truth, ease of contribution, ease of extension and simplified build process.
 
-<img src="images/003-01.png" width="300">
+![architecture](images/cue-upstream/architecture.png "architecture")
+
 
 
 By switching to CUE, we can use a single build chain to produce the OpenAPI spec as a generated file that is convenient to users who want to build against flagD ( possible code-generating their own client libraries). Though we would not need to use the generated OpenAPI spec through any further generator. Instead, the protoc-http tool will allow for generation from protobuf files as per @James-Milligan initial investigation.

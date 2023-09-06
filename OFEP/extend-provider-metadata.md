@@ -1,3 +1,11 @@
+---
+date: 2023-09-06
+title: Extend Provider Metadata
+status: Approved
+authors: [Michael Beemer]
+tags: [spec]
+
+---
 ## Extend provider metadata
 
 ## State: APPROVED

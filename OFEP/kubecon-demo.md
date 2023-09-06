@@ -1,4 +1,12 @@
-## 002-OFEP-kubecon-demo
+---
+date: 2022-07-12
+title: Kubecon Demo
+status: Approved
+authors: [Alex Jones]
+tags: [flagd, ofo]
+
+---
+# Kubecon demo
 
 ## State: APPROVED
 
@@ -13,7 +21,7 @@ The following proposal is to build a demo image admission application that could
 
 Comments welcome.
 
-<img src="images/002-01.png" width="300">
+![architecture](images/kubecon-demo/architecture.png "architecture")
 
 ## Work involved
 

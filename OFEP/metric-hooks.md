@@ -1,4 +1,12 @@
-## OFEP-hook-for-metrics
+---
+date: 2023-06-01
+title: Hooks for Metrics
+status: Approved
+authors: [Michael Beemer, Todd Baert, Kavindu Dodanduwa, Justin Abrahms, Giovanni Liva]
+tags: [spec, sdk]
+
+---
+# Hook for metrics
 
 ## State: APPROVED
 
