@@ -9,7 +9,7 @@ sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..',
 parent_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
 
 # -- Project information -----------------------------------------------------
-project = 'OFEP-TESTING'
+project = 'OpenFeature Enhancement Proposal'
 copyright = '2023 OpenFeature is a Cloud Native Computing Foundation sandbox project | All Rights Reserved'
 author = 'Mihir Mittal'
 release = '1'
