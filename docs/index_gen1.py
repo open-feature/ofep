@@ -34,7 +34,7 @@ if not os.path.exists(script_directory):
 ofep_files = [file for file in os.listdir(source_directory) if file.endswith('.md') and file != 'OFEP-template.md']
 
 # Generate the toctree for index.rst
-content = 'Welcome to OFEP-TESTING documentation \n========================================\n .. toctree::\n   :titlesonly:\n   :maxdepth: 1\n   :hidden:\n   :caption: OFEP Documentation\n\n   '
+content = 'OpenFeature Enhancement Proposals\n========================================\n .. toctree::\n   :titlesonly:\n   :maxdepth: 1\n   :hidden:\n   :caption: OFEP Documentation\n\n   '
 
 content += '\n   '.join([ofep_file[:-3] for ofep_file in ofep_files])
 
