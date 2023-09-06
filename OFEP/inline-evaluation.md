@@ -1,4 +1,12 @@
-## Inline Evaluation of Flag Rules
+---
+date: 2023-03-16
+title: Inline Evaluation of Flag Rules
+status: Rejected
+authors: [Justin Abrahms, Pete Hodgson]
+tags: [flagd]
+
+---
+# Inline Evaluation of Flag Rules
 
 ## State: REJECTED
 

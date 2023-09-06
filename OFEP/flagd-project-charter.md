@@ -1,4 +1,12 @@
-## Make flagD a full sub-project of OpenFeature
+---
+date: 2023-07-11
+title: FlagD as full sub-project
+status: Approved
+authors: [Alois Reitbauer]
+tags: [sdk, spec, ofo, flagd]
+
+---
+# Make FlagD a full sub-project of OpenFeature
 
 ## State: APPROVED
 

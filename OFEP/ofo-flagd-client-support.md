@@ -1,4 +1,12 @@
-## flagd client support driven by OpenFeature Operator
+---
+date: 2023-03-24
+title: Flagd Client Support driven by OFO
+status: Withdrawn
+authors: [Skye Gill]
+tags: [flagd, ofo]
+
+---
+# Flagd client support driven by OpenFeature Operator
 
 ## State: WITHDRAWN
 
@@ -30,7 +38,7 @@ This results in flagd being externally accessible.
 
 The following diagram depicts the architecture. Resources inside the green box are created via the proposed CRD.
 
-![OFO client architecture](images/ofo-flagd-client-support-architecture.png "OFO Client Architecture")
+![OFO client architecture](images/ofo-client-support/architecture.png "OFO Client Architecture")
 
 Note: The example depicted by the diagram uses a subdomain to route the request to flagd but [path matching is also possible](https://gateway-api.sigs.k8s.io/api-types/httproute/#matches).
 

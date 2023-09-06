@@ -1,4 +1,12 @@
-## OFEP-provider-metadata-capability-discovery
+---
+date: 2023-04-15
+title: Capability discovery for providers
+status: Approved
+authors: [Todd Baert]
+tags: [specification, sdk]
+
+---
+# Capability discovery for providers
 
 ## State: APPROVED
 

@@ -1,4 +1,12 @@
-## Provider to client mapping
+---
+date: 2023-04-27
+title: Provider-Client Mapping
+status: Approved
+authors: [Justin Abrahms]
+tags: [spec]
+
+---
+# Provider to client mapping
 
 ## State: APPROVED
 

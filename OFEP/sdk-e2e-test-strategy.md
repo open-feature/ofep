@@ -1,4 +1,12 @@
-## OFEP: SDK end-to-end test strategy
+---
+date: 2023-07-25
+title: SDK end-to-end test strategy
+status: Approved
+authors: [Michael Beemer, Todd Baert, Kavindu Dodanduwa, Justin Abrahms]
+tags: [specification, sdk, flagd]
+
+---
+# SDK end-to-end test strategy
 
 ## State: APPROVED
 
