@@ -21,7 +21,7 @@ The following proposal is to build a demo image admission application that could
 
 Comments welcome.
 
-![unlabelled_image](images/002-01.png "unlabelled_image")
+![architecture](images/kubecon-demo/architecture.png "architecture")
 
 ## Work involved
 

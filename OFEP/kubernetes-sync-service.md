@@ -38,7 +38,7 @@ type ISync interface {
 
 
 
-![unlabelled_image](images/004-01.png "unlabelled_image")
+![communication](images/kubernetes-sync-service/communication.png "communication")
 
 
 ### Realtime updates
@@ -62,7 +62,7 @@ informer := config.InformerFactory.InformerFor(&batch_v1.Job{}, func(client kube
 
 I believe a _sharedinformer_ might be appropriate over indexed, unless we're looping over all the featureflagconfigurations in the cluster and they list in their hundreds.
 
-![unlabelled_image](images/004-02.png "unlabelled_image")
+![notification](images/kubernetes-sync-service/notification.png "notification")
 
 
 

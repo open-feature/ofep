@@ -36,8 +36,7 @@ Direct set and standing orders are the pet names for them in this illustration.
 
 These combined should cover the majority of use cases and get the project into a rapidly usable state given they are fairly well-trodden patterns for interacting with services.
 
-![unlabelled_image](images/001-01.png "unlabelled_image")
-
+![architecture](images/cloud-native-pattern/architecture.png "architecture")
 
 ## Direct set
 
@@ -60,7 +59,8 @@ The job of this webhook is to run after the validating admission component and i
 This webhook will deal with configuration such as open port, transport type and configuration path locations ( possibly expanding to backing type such as PVC vs configmap ).
 
 ### Configuration reloading
-![unlabelled_image](images/001-02.png "unlabelled_image")
+
+![config reload architecture](images/cloud-native-pattern/config-reload.png "uconfig reload architecture")
 
 In the scenario of a feature flag being altered, the configuration would be modified directly by the controller-manager and the agent would micro reload to present to the host container ( perhaps using the confd workflow ).
 
@@ -96,16 +96,13 @@ Neither design ( operator vs api ) are immune to this, however, the distance of 
 
 In addition, when the API server fails or restarts all calls will start timing out to it unless there is behaviour introduced into the agents ( which is completely possible ). However, the remark about a single point of failure holds true.
 
-![unlabelled_image](images/001-03.png "unlabelled_image")
-
+![single point of failure](images/cloud-native-pattern/single-point-of-failure.png "single point of failure")
 
 Let me know your thoughts
 
-
 ## Additional architecture
 
-![unlabelled_image](images/001-04.png "unlabelled_image")
-
+![E2E Diagram](images/cloud-native-pattern/e2e-diagram.png "E2E Diagram")
 
 ## Post Kubecon configuration 
 
@@ -131,12 +128,12 @@ In order to enable host containers to consume the sidecar then there should be m
 There was an initial proposal to incorporate the AF_LOCAL/AF_UNIX socket family and within that family, we should decide whether is a need to support SOCK_STREAM and SOCK_DGRAM, I would initially suggest only supporting SOCK_STREAM.
 This would enable us to further layer HTTP protocol support on top where required.
 
-![unlabelled_image](images/001-05.png "unlabelled_image")
-
+![Host to Agent Communication](images/cloud-native-pattern/host-to-agent-com.png "Host to Agent Communication")
 
 ## Flow
+
 The below illustration has been updated also to reflect the current thinking around the initialisation flow of the flagging system.
 
 That said there are some learnings from Istio and concerns around side car overhead - namely around upgrading and maintenance. As such it is worth exploring a pattern for rolling or upgrading sidecars, as the implication is that this will force a deployment rollout due to the change on the deployment object ( and other resource types sts/ds)
 
-![unlabelled_image](images/001-06.png "unlabelled_image")
+![Remove Provider](images/cloud-native-pattern/remote-provider.png "Remove Provider")

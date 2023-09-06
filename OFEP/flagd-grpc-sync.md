@@ -21,7 +21,7 @@ ISync interface and current sync mechanism implementations.
 
 The gRPC schema will be defined by flagd and supporting flag management system(s) will then implement the contract.
 
-![unlabelled_image](images/ofep-fd-grpc-1.png "unlabelled_image")
+![bidirectional communication](images/grpc-sync/bidirectional-communication.png "bidirectional communication")
 
 
 Further, grpc server push can be expanded to have `event types` such as flag additions, updates and deletions, giving more
@@ -33,7 +33,7 @@ a state management system to derive the matching event type for a specific flag 
 flagd must not maintain any state (i.e- flagd must be stateless) and only react on the sync type to update flag 
 configurations.
 
-![unlabelled_image](images/ofep-fd-grpc-2.png "unlabelled_image")
+![dataflow](images/grpc-sync/dataflow.png "dataflow")
 
 ### Tasks
 

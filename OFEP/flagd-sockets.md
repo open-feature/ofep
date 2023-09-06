@@ -15,7 +15,7 @@ Often when flagD is required to talk to another application within the same pod,
 than the full TCP/IP stack. There are also permission benefits around using a socket in terms of file ownership.
 This OFEP outlines an approach to use gRPC over Unix sockets to enable this.
 
-![unlabelled_image](images/006-01.png "unlabelled_image")
+![communication](images/flagd-sockets/communication.png "communication")
 
 
 ## Background

@@ -21,7 +21,7 @@ My proposal here would be to choose a new top-level DSL to define the specificat
 This would mean we could use a single file(s) and toolchain to generate all of the automatically created code for flagD.
 The benefit here would be a single source of truth, ease of contribution, ease of extension and simplified build process.
 
-![unlabelled_image](images/003-01.png "unlabelled_image")
+![architecture](images/cue-upstream/architecture.png "architecture")
 
 
 
