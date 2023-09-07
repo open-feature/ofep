@@ -31,7 +31,7 @@ copy_files_path = os.path.join(parent_dir,'docs', 'copy_files.py')
 if not os.path.exists('_build'):
     os.makedirs('_build')
 
-python_executable = '/bin/python3'
+python_executable = 'python'
 os.system(f'{python_executable} {copy_files_path}')
 os.system(f'{python_executable} {index_gen_path}')
 

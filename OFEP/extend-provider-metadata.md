@@ -6,7 +6,7 @@ authors: [Michael Beemer]
 tags: [spec]
 
 ---
-## Extend provider metadata
+# Extend provider metadata
 
 ## State: APPROVED
 

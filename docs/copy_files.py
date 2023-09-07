@@ -1,5 +1,6 @@
 import os
 import shutil
+from distutils.dir_util import copy_tree
 
 # Get the root directory of the repository
 root_directory = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
@@ -7,8 +8,8 @@ root_directory = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 # Define the source and destination directories
 source_directory = os.path.join(root_directory, 'OFEP')
 destination_directory = os.path.join(root_directory, 'docs', 'source')
-source_subdirectory = os.path.join(source_directory, 'images')
-destination_subdirectory = os.path.join(destination_directory, 'images')
+source_image_directory = os.path.join(source_directory, 'images')
+destination_image_directory = os.path.join(destination_directory, 'images')
 
 # Create the destination directory if it doesn't exist
 if not os.path.exists(destination_directory):
@@ -28,13 +29,8 @@ print("Copying completed.")
 
 
 # copy the images subdirectory from OFEP to docs/source
-if not os.path.exists(destination_subdirectory):
-    os.makedirs(destination_subdirectory)
+if not os.path.exists(destination_image_directory):
+    os.makedirs(destination_image_directory)
 
-for filename in os.listdir(source_subdirectory):
-    source_file = os.path.join(source_subdirectory, filename)
-    destination_file = os.path.join(destination_subdirectory, filename)
 
-    # Check if the file is a PNG file (case-insensitive)
-    if filename.lower().endswith('.png'):
-        shutil.copy2(source_file, destination_file)  # Copy the file
+copy_tree(source_image_directory, destination_image_directory)
