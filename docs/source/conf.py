@@ -10,7 +10,7 @@ parent_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..')
 
 # -- Project information -----------------------------------------------------
 project = 'OpenFeature Enhancement Proposal'
-copyright = '2023 OpenFeature is a Cloud Native Computing Foundation sandbox project | All Rights Reserved'
+copyright = '2023 OpenFeature is a Cloud Native Computing Foundation incubating project | All Rights Reserved'
 author = 'Mihir Mittal'
 release = '1'
 
