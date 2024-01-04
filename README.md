@@ -44,12 +44,20 @@ While OFEPs are intended for "significant" changes, we recommend trying to keep 
 
 - Once the idea of the proposal is reviewed by the assigned reviewers, the OFEP author can then reference a Pull Request to the issue containing the proposal. 
 - For adding the OFEP as a Pull Request, first, [fork](https://help.github.com/en/articles/fork-a-repo) this [repo](https://github.com/open-feature/ofep).
-- Copy [`000-OFEP-template.md`](./000-OFEP-template.md) to `000-OFEP-my-title.md`, where `my-title` is a title relevant to your proposal, and `000` is the OFEP ID. Leave the number as is for now. Once a Pull Request is made, update this ID to match the next smallest available ID.
+- Copy [`OFEP-template.md`](./OFEP-template.md) to `OFEP/my-title.md`, where `my-title` is a title relevant to your proposal. If you want to attach any image to the OFEP, add that image to the `OFEP/images` folder and attach it to the OFEP in the format `![label](images/image-name.png "label")`.
 - Fill in the template and please take care of the details as followed while creating the issue for Enhancement Proposal.
 - The initial `status` of an OFEP should be in `drafting` or `pending for review` stage.
 - An OFEP is `approved` when atleast two/three reviewers github-approve the PR but this surely depends on its nature. The OFEP is then merged.
 - If an OFEP is `rejected` or `withdrawn`, the PR is closed. Note that these OFEPs submissions are still recorded, as GitHub retains both the discussion and the proposal, even if the branch is later deleted.
 - If an OFEP discussion becomes long, or the OFEP then goes through a major revision, the next version of the OFEP can be posted as a new PR, which references the old PR. The old PR is then closed. This makes OFEP review easier to follow and participate in.
+
+### Automerging-flow of an OFEP Pull Request
+
+- Approved OFEP Pull Requests receive the automerge label.
+- A 3-day waiting period starts for objection raising.
+- A comment is also posted on the Pull Request stating the same.
+- Objections lead to the removal of the automerge label.
+- No objections result in auto-merging by [Mergify](https://mergify.com).
 
 ## Implementing the OFEP
 
